@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* 폰트 선언 */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Hanalei+Fill');
+@import url('https://fonts.googleapis.com/css?family=Jua');
+
+/* By Korea name = 설동민 */
+/* ID : Sight */
+/* 2017.09.05 */
+
+/* css 초기화 */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,
+sup,var,b,i,dl,dt/*,dd*/,ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	font-family: 'Nanum Gothic',나눔고딕,'NanumGothic','맑은 고딕','Noto Sans Georgian',HelveticalNeue,DroidSans,Sans-serif,Helvetica;
+}
+
+button{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	-webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+	vertical-align: baseline;
+}
+
+body{
+	font-family: 'Nanum Gothic',나눔고딕,'NanumGothic','맑은 고딕','Noto Sans Georgian',HelveticalNeue,DroidSans,Sans-serif,Helvetica;
+	line-height: 1;	
+}
+
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+	display: block;
+}
+
+nav ul, li{
+	list-style: none;
+}
+
+ul,li{
+	list-style:none;	
+}
+
+a{
+	margin: 0;
+	padding: 0;
+	/*font-size: 100%;*/
+	font-size: 12px;
+	color: #707070;
+	text-decoration: none;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+img{
+	vertical-align: top;
+}
+
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input{
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+	vertical-align: top;
+	border: 1px solid #808080;
+	/* color: #e65d5d; */
+	border-radius: 0;
+	font-family: NanumGothic,나눔고딕,'NanumGothic','맑은 고딕', HelveticalNeue,DroidSans,Sans-serif,Helvetica;
+}
+
+/* for Firefox */
+input::-moz-placeholder{
+	font-size : 17px;
+	font-weight: bold;
+	font-family: 'Hanna', serif;
+}
+
+/* for Chrome,Safari, Opera */
+input::-webkit-input-placeholder{
+	font-size : 17px;
+	font-weight: bold;
+	font-family: 'Hanna', serif;
+}
+
+/* for Edge */
+input:-ms-input-placeholder{
+	font-size : 17px;
+	font-weight: bold;
+	font-family: 'Hanna', serif;
+}
+
+/* for IE */
+input:-ms-input-placeholder{
+	font-size : 17px;
+	font-weight: bold;
+	font-family: 'Hanna', serif;
+}
