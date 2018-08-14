@@ -18,3 +18,9 @@
 //= require turbolinks
 //= require_tree .
 
+
+(document).on("turbolinks:load", function(){
+    var data = $('body').data();
+    $(document).trigger(data.controller + ':loaded');
+    $(document).trigger(data.controller + '#' + data.action + ':loaded');
+});
