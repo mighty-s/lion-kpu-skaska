@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'notify/index'
+
   root 'home#index'
 
   get 'home/index'
