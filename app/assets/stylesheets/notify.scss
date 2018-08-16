@@ -1,0 +1,64 @@
+// Place all the styles related to the notify controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.notify-box
+{
+  width: 70%;
+  height: 696px;
+  margin: 20px auto;
+
+  .notification
+  {
+    margin-bottom:20px;
+  }
+  .notify-list
+  {
+    border-top:1px solid #2E2F30;
+    border-bottom: 1px solid #2E2F30;
+    width:100%;
+    height:800px;
+  }
+
+  .notify-one
+  {
+    &:hover
+    {
+      background-color:#BBBBBB;
+    }
+    .notify-title
+    {
+      font-size:20px;
+      padding-top:20px;
+      margin-left:20px;
+      padding-bottom:10px;
+    }
+  }
+
+  .notify-one
+  {
+    border-bottom:1px solid #2E2F30;
+    .notify-title
+    {
+      font-size: 20px;
+      .notify-content
+      {
+
+        font-size:20px;
+        padding-top:20px;
+        padding-bottom:10px;
+      }
+    }
+  }
+
+
+  .notify-content
+  {
+    font-size:15px;
+    margin-left:20px;
+    margin-bottom:20px;
+
+  }
+}
+
