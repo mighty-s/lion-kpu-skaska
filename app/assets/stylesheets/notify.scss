@@ -62,3 +62,68 @@
   }
 }
 
+///////////////// show.html.erb의 scss 부
+
+#notify_show_head_div
+{
+  width:70%;
+  margin : 30px auto 0;
+  .gotolist
+  {
+    float: right;
+  }
+
+  .gotolist::after
+  {
+    content:'';
+    display:block;
+    clear:both;
+  }
+
+  .notify_show_title
+  {
+    padding-top:60px;
+    border-bottom:1px solid #2E2F30;
+  }
+
+  .notify_show_content
+  {
+    margin-top:45px;
+    padding-bottom:30px;
+    border-bottom:1px solid #2E2F30;
+  }
+
+  .comment_box
+  {
+    margin-top:45px;
+  }
+
+
+}
+.comment_box
+{
+  .comment_content
+  {
+    .comment
+    {
+      margin-top:20px;
+      width:100%;
+      display:block;
+      resize:none;
+    }
+    .submit
+    {
+      float:right;
+      margin : 5px;
+      color:white;
+      background-color:#000;
+    }
+
+    .submit::after
+    {
+      content:'';
+      display:block;
+      claer:both;
+    }
+  }
+}
