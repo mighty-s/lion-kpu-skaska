@@ -37,14 +37,14 @@
   <div class="bottom-right">
     <div class="notify">
       <p>공지 사항</p>
-      <a class="notify-more" href="/notices/index">more..</a>
+      <a class="notify-more" href="/notices">more....</a>
     </div>
 
     <div class="bottom-right-notify">
       <div class="bottom-notify">
-        <p class="bottom-notify-title"><a href="#">홈페이지가 생성돼씀다</a></p>
-        <p class="bottom-notify-title"><a href="#">홈페이지가 생성돼씀다</a></p>
-        <p class="bottom-notify-title"><a href="#">홈페이지가 생성돼씀다</a></p>
+        <% @notices.each do |x| %>
+          <p class="bottom-notify-title"><a href="/notices/<%=x.id%>"><%= x.title %></a></p>
+        <%end%>
       </div>
     </div>
 

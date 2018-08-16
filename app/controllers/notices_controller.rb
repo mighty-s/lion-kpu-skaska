@@ -10,6 +10,7 @@ class NoticesController < ApplicationController
   # GET /notices/1
   # GET /notices/1.json
   def show
+    @notice = Notice.find(params[:id])
   end
 
   # GET /notices/new
@@ -19,6 +20,7 @@ class NoticesController < ApplicationController
 
   # GET /notices/1/edit
   def edit
+    @notice = Notice.find(params[:id])
   end
 
   # POST /notices
@@ -40,6 +42,7 @@ class NoticesController < ApplicationController
   # PATCH/PUT /notices/1
   # PATCH/PUT /notices/1.json
   def update
+    @notice = Notice.find(params[:id])
     respond_to do |format|
       if @notice.update(notice_params)
         format.html { redirect_to @notice, notice: 'Notice was successfully updated.' }
@@ -54,6 +57,7 @@ class NoticesController < ApplicationController
   # DELETE /notices/1
   # DELETE /notices/1.json
   def destroy
+    @notice = Notice.find(params[:id])
     @notice.destroy
     respond_to do |format|
       format.html { redirect_to notices_url, notice: 'Notice was successfully destroyed.' }
@@ -64,7 +68,7 @@ class NoticesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_notice
-      @notice = Notice.find(params[:id])
+      @notices = Notice.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

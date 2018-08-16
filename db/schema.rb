@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180814152940) do
+ActiveRecord::Schema.define(version: 20180814185640) do
 
-  create_table "notes", force: :cascade do |t|
-    t.string "title"
+  create_table "notices", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "content", null: false
+    t.string "customer_id"
+    t.integer "flag", default: 0
+    t.integer "showed", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
