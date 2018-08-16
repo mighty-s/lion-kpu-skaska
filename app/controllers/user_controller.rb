@@ -4,4 +4,7 @@ class UserController < ApplicationController
 
   def edit
   end
+
+  def mypage
+  end
 end
