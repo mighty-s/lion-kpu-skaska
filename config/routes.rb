@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'user/mypage'
 
-  get 'user/join_two'
+  post 'user/join_two'
 
 
 
