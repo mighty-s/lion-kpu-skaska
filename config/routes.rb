@@ -13,5 +13,9 @@ Rails.application.routes.draw do
 
   get 'user/mypage'
 
+  post 'user/join_two'
+
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

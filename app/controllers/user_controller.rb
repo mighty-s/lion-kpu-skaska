@@ -7,4 +7,11 @@ class UserController < ApplicationController
 
   def mypage
   end
+
+  def join
+    @token = form_authenticity_token
+  end
+
+  def join_two
+  end
 end
