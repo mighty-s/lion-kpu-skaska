@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user/login'
+
+  get 'user/edit'
+
   get 'notify/index'
 
   root 'home#index'
