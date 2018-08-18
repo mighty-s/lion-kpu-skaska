@@ -127,3 +127,51 @@
     }
   }
 }
+
+
+.create_notify
+{
+  a
+  {
+    padding : 10px;
+    float: right;
+    color:white;
+    background-color:#2E2F30;
+  }
+}
+/////////create.scss
+
+#n_create
+{
+  margin: 20px auto;
+  width: 70%;
+  .notify_create_box
+  {
+
+    p
+    {
+      margin-top: 20px;
+    }
+    .title
+    {
+      width:100%;
+      margin-top : 10px;
+    }
+    textarea
+    {
+      width:100%;
+      margin-top:20px;
+      display:block;
+      resize:none;
+    }
+
+    .n_submit
+    {
+      float:right;
+      margin-top:5px;
+      padding:10px;
+      color:#2E2F30; //아따 이것이 왜 안먹는당가?
+      background-color:white;
+    }
+  }
+}
