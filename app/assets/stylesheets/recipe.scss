@@ -1,0 +1,383 @@
+
+.show{
+
+  .left
+  {
+    position:fixed;
+    left:0;
+    height: 610px;
+    width:65%;
+    padding:10px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+  }
+
+  .right
+  {
+    position:fixed;
+    right:0;
+    height: 630px;
+    width:33%;
+    background-color: #f8f8f8;
+    overflow-x:hidden;
+    overflow-y:hidden;
+  }
+
+  &::after
+  {
+    content:"";
+    clear:both;
+    display:block;
+  }
+} //show 끝
+
+.left
+{
+  .left-top
+  {
+    position:relative;
+    padding:40px;
+  }
+
+  .left-bottom
+  {
+    position:relative;
+    background-color:#000;
+    padding:20px;
+  }
+
+  &::after
+  {
+    content:"";
+    clear:both;
+    display:block;
+  }
+} //left 끝
+
+
+.left-top
+{
+  .left-top-title
+  {
+    font-weight:bold;
+    font-size:60px;
+    margin-bottom:30px;
+  }
+
+  .left-top-content
+  {
+    margin: 0 auto;
+  }
+
+} //left-top 끝
+
+.left-top-content
+{
+  .pictures
+  {
+
+    height:240px;
+    width:100%;
+    padding-bottom:30px;
+    border-bottom:1px solid #cfcfcf;
+  }
+
+  .content-comment
+  {
+    font-size:15px;
+    margin: 30px 10px 30px 10px;
+  }
+
+} //left-top-content 끝
+
+.pictures {
+
+  .picture {
+    float: left;
+    height: 240px;
+    width: 230px;
+    margin-right:15px;
+    background-color:#B00100;
+  }
+
+} //pictures 끝
+
+.left-bottom
+{
+  .comments
+  {
+    background-color:white;
+    margin: 10px 20px 20px 10px;
+    padding:10px;
+  }
+} //left-bottom 끝
+
+.comments
+{
+  .comments-title
+  {
+    font-weight:bold;
+    margin-bottom:20px;
+  }
+
+  .comments-write
+  {
+    width:80%;
+    border:0;
+    border-bottom:1px solid #cfcfcf;
+    padding-bottom:7px;
+  }
+
+  .submit
+  {
+    font-size:12px;
+    font-weight:bold;
+    background-color:#000;
+    color:white;
+    height: 25px;
+    width:60px;
+  }
+
+  .comments-comment
+  {
+    width:100%;
+    border-bottom:1px solid #cfcfcf;
+    padding-bottom:2px;
+    margin-top:15px;
+  }
+
+} // comments 끝
+
+
+
+
+.right
+{
+  .right_title
+  {
+    height:90px;
+    border-bottom:1px solid #cfcfcf;
+    padding:20px 20px 5px 20px;
+  }
+
+  .right-comment
+  {
+    border-bottom:1px solid #cfcfcf;
+    padding: 30px 20px 30px 20px;
+  }
+
+  .collection-save
+  {
+    border-bottom:1px solid #cfcfcf;
+    padding: 30px 20px 30px 20px;
+  }
+
+  .like-button
+  {
+    background-color:lawngreen;
+    text-align:center;
+    color:white;
+    border-radius: 40px;
+    width: 80%;
+    height: 30px;
+    margin : 20px auto;
+    padding-top:10px;
+    font-size:20px;
+  }
+
+  .share
+  {
+    margin:100px 0 20px 100px;
+
+  }
+
+}//right 끝
+
+
+.right_title{
+
+  .right_title_left
+  {
+    padding-left:20px;
+    position:absolute;
+    left:0;
+    width:70%;
+  }
+
+  .profile_image {
+    position:absolute;
+    right:0;
+    border: 4px solid greenyellow;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-right:20px;
+  }
+
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+} //right-title 끝
+
+
+.right_title_left {
+  .nickname {
+    margin-top:3px;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    height: 40%;
+  }
+
+  .follow {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #46fc09;
+    color: white;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 40px;
+    width: 110px;
+  }
+
+} //right_title_left 끝
+
+.right-comment
+{
+
+  .comment-hash
+  {
+    width:250px;
+    margin-bottom:10px;
+    font-weight:bold;
+
+    p
+    {
+      margin-bottom:5px;
+    }
+  }
+
+  .see-like-number
+  {
+    width:250px;
+    margin-bottom:20px;
+    color:gray;
+    font-weight:bold;
+
+    &::after
+    {
+      content:"";
+      display:block;
+      clear:both;
+    }
+  }//see-like-number 끝
+
+  .date
+  {
+    display:block;
+    color:gray;
+    font-size:13px;
+
+    .when
+    {
+      display:inline-block;
+    }
+
+  } //date 끝
+
+} //right-comment 끝
+
+
+.see-like-number
+{
+  .comment-see
+  {
+    float:left;
+    width:30px;
+    margin-right:10px;
+  }
+
+  .comment-like
+  {
+    float:left;
+    width:30px;
+    margin-right:10px;
+  }
+
+  .comment-number
+  {
+    float:left;
+    width:30px;
+    margin-right:10px;
+  }
+} //see-like-number 끝
+
+
+
+.collection-save
+{
+
+  .save-name
+  {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #46fc09;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 12px;
+    width: 60px;
+    height:20px;
+  } // 이미지 받아서 input 하자
+} // collection-save 끝
+
+
+.share
+{
+  .facebook
+  {
+    display:inline-block;
+    border-radius:50%;
+    height:40px;
+    width:40px;
+    margin-right:20px;
+    background: url(facebook.png) no-repeat;
+  }
+
+
+  .instagram
+  {
+    display:inline-block;
+    border-radius:50%;
+    height:40px;
+    width:40px;
+    margin-right:20px;
+    background: url(instagram.jpeg) no-repeat;
+  }
+
+  .twitter
+  {
+    display:inline-block;
+    border-radius:50%;
+    height:40px;
+    width:40px;
+    margin-right:20px;
+    background: url(twitter.jpeg) no-repeat;
+  }
+
+  .kakao-story
+  {
+    display:inline-block;
+    border-radius:50%;
+    height:40px;
+    width:40px;
+    background: url(kakao_stroy.jpeg) no-repeat;
+  }
+} //share 끝
+
+
+
+
