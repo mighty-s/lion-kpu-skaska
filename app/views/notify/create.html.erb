@@ -5,12 +5,13 @@
 
 <div id="n_create">
   <div class="notify_create_box">
-    <form action="">
+    <form action="/notify/index" method="post">
+      <input type=hidden value=<%= @token %> name='authenticity_token'>
       <p>제목</p>
-      <input class="title" type="text" name="" id="">
+      <input class="title" type="text" name="notify_title" id="">
 
       <p>내용</p>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <textarea name="notify_content" id="" cols="30" rows="10"></textarea>
       <input class="n_submit" type="submit" value="작성하기">
     </form>
     
