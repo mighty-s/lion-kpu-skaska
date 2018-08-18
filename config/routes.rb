@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'recipe/index'
+
   get 'user/login'
 
   get 'user/edit'
@@ -14,6 +16,8 @@ Rails.application.routes.draw do
   get 'user/mypage'
 
   post 'user/join_two'
+
+  get 'notify/show'
 
 
 
