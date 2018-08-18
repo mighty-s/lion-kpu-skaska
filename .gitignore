@@ -21,4 +21,9 @@
 /yarn-error.log
 
 .byebug_history
+
+# JetBrains 관련 설정 무시
 .idea/*
+
+# DB 구조 관련 schema.rb 컨플릭트로 인해 제외
+/db/schema.rb
