@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'recipe/index'
+
   get 'user/login'
 
   get 'user/edit'
