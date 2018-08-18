@@ -1,0 +1,42 @@
+<%= form_with(model: notice, local: true) do |form| %>
+  <% if notice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(notice.errors.count, "error") %> prohibited this notice from being saved:</h2>
+
+      <ul>
+      <% notice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :notice_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content, id: :notice_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :customer_id %>
+    <%= form.text_field :customer_id, id: :notice_customer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :flag %>
+    <%= form.number_field :flag, id: :notice_flag %>
+  </div>
+
+  <div class="field">
+    <%= form.label :showed %>
+    <%= form.number_field :showed, id: :notice_showed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
