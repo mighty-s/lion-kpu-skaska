@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
 # -------- 고주원이 설정한 라우트 -------------
-  resources :notices
 
 # --------- 기존 master branch routes ------------
   
