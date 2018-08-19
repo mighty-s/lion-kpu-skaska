@@ -27,3 +27,6 @@
 
 # DB 구조 관련 schema.rb 컨플릭트로 인해 제외
 /db/schema.rb
+
+# 아치리눅스 디랙토리 관련 파일 제외
+.directroty
