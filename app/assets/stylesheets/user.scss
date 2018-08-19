@@ -7,16 +7,11 @@
     background-color: white;
   }
 
-  .email {
+  .input_text {
     margin: 10px 0 30px;
     height:40px;
     width:400px;
-  }
-
-  .pw {
-    margin: 10px 0 0;
-    height:40px;
-    width:400px;
+    padding-left: 8px;
   }
 
   .sgg-login-button {
@@ -32,7 +27,9 @@
     margin: 0 65px;
     color: black;
   }
-
+  .find:hover{
+    color:white;
+  }
 }
 
 //여밑에서부터는 회원가입
@@ -43,6 +40,7 @@
   width:500px;
   margin:60px auto 50px;
 
+
   .title
   {
     margin:0 150px;
@@ -50,25 +48,15 @@
     font-weight: bold;
   }
 
-  .email
+  .input_text
   {
     border-width: 0 0 1px 0;
     width:100%;
     margin:50px 0 20px;
-  }
-
-  .pw
-  {
-    border-width: 0 0 1px 0;
-    width:100%;
-    margin:10px 0 20px;
-  }
-
-  .pw-re
-  {
-    border-width: 0 0 1px 0;
-    width:100%;
-    margin:10px 0 20px;
+    padding: 8px;
+    font-size : 17px;
+    font-family: 'Hanna', serif;
+    color: #333333;
   }
 
   .next
@@ -96,30 +84,14 @@
   }
 
 
-  .nickname
+  .input_text
   {
     border : 0px;
     border-bottom : 2px solid #cfcfcf;
     width:100%;
     margin:20px 0;
+    padding: 8px;
   }
-
-  .name
-  {
-    border : 0px;
-    border-bottom : 2px solid #cfcfcf;
-    width:100%;
-    margin:20px 0;
-  }
-
-  .phone
-  {
-    border : 0px;
-    border-bottom : 2px solid #cfcfcf;
-    width:100%;
-    margin:20px 0;
-  }
-
   .gender
   {
     border : 0px;

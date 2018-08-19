@@ -14,7 +14,6 @@
   list-style: none;
   margin-right : 20px;
   color: #ffffff;
-  background-color:#cfcfcf;
   float:right;
 }
 
@@ -27,16 +26,24 @@
 {
   margin-left:20px;
   margin-bottom:30px;
+  input{
+    padding: 5px 10px;
+  }
 }
 
 .search-text
 {
-  margin-right : 10px;
+  margin-right: 3px;
   float:right;
+  border-radius: 15px;
 }
 
 .search-button
 {
   margin-right : 20px;
   float:right;
+  border-radius: 15px;
+  background-color: #999999;
+  color: #2E2F30;
+  font-weight: bold;
 }
