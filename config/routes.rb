@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 # -------- 고주원이 설정한 라우트 -------------
   
-  resources :notices
   
   root 'home#index'
 
