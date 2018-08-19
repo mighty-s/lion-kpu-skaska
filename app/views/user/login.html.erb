@@ -4,16 +4,16 @@
 
 
 
-<form>
-
+<form action ="<%=session_users_path%>" method="post" autocomplete="off" >
   <div class = "sgg">
     <section class="sgg-login">
       <span>이메일스까</span>
-      <input class ="email" type="text">
+      <input name ="email" class ="email" type="text">
 
       <span>비밀번호스까</span>
-      <input class ="pw" type="text">
+      <input name = "pw"   class ="pw" type="password">
 
+      <input type= "hidden" value="<%=form_authenticity_token%>" name="authenticity_token">
       <input class = "sgg-login-button" type = "submit" value = "로그인">
 
       <a class="find" href="#">아이디 찾기</a>
