@@ -25,6 +25,10 @@ Rails.application.routes.draw do
 
   get 'notify/show'
 
+  get 'notify/create'
+
+  post 'notify/index'
+
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
