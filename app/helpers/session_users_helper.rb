@@ -28,4 +28,15 @@ module SessionUsersHelper
   def user_loged_in?
     !session[:user].nil?
   end
+
+  # 로그인한 유저가 관리자인지 판별하는 함수
+  # 설동민 지음(공저 송은주)
+  def is_user_admin?
+   if user_loged_in?
+     session[:user]['grade'] == 'admin'
+     true
+   else
+     false
+   end
+  end
 end
