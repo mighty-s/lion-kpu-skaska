@@ -18,7 +18,6 @@ class SessionUsersController < ApplicationController
     end
   end
 
-  #
   # 유저가 로그아웃을 할 경우
   # 세션에서 값을 제거하는 액션
   #
