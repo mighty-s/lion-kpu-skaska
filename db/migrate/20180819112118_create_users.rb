@@ -14,6 +14,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :name              # 이름
       t.string :phone             # 전화번호
       t.string :gender            # 성별
+      t.string :grade             # 관리자
       t.string :status, default: :normal # 현재 유저계정 상태
       t.timestamps
     end
