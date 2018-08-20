@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+# pry for rails         / add : sdm , date : 2018.8.19
+gem 'pry-rails'
 # Bootstrap             / add : sdm , date : 2018.8.14
 gem 'bootstrap', '~> 4.1.1'
 # JQuery                / add : sdm , date : 2018.8.14
@@ -34,8 +35,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+
+# Use ActiveModel has_secure_password   /  add : sdm , date : 2018.8.19 db 값 암호화용
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
