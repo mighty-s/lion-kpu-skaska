@@ -42,8 +42,6 @@ Rails.application.routes.draw do
 
   get 'notify/create'
 
-  get 'recipe/new'
-
   # Comment routes
 
     #RecipeComment routes
@@ -53,7 +51,7 @@ Rails.application.routes.draw do
   delete 'comments/:id' => 'comments#destroy'
 
   # Recipe routes
-  get 'recipe/index'
+  resources :recipes
 
   # Home routes
   get 'home/search' => 'home#search'
