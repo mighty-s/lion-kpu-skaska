@@ -9,7 +9,7 @@
           <li><a class="menulink" href="/user/mypage">마이페이지</a></li>
           <li><p><%=session[:user]['nickname']%></p></li>
           <li><%=link_to session_users_path(session[:user]['id']), method: "delete", class: "menulink" do%>
-                로그 아웃 <%end%>
+                로그아웃 <%end%>
           </li>
         <%else%>
           <li><a class="menulink" href="/user/join">회원가입</a></li>
@@ -24,10 +24,10 @@
     <a href="/">스까~</a>
   </div>
   <div class="submit-button">
-    <a href="/recipe/new" class="write">등록</a>
+    <a href="/recipe/new" class="write">등록하기</a>
+    <form>
       <input class="search-button" type="submit" value="검색~">
       <input class="search-text" type="text" name="" id="">
     </form>
   </div>
-
 </div>
