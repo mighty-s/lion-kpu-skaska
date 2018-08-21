@@ -55,8 +55,9 @@ Rails.application.routes.draw do
   # Recipe routes
   get 'recipe/index'
 
-  # home에서 서치한거 찾았을때
-  get 'home/searchResult'
+  # Home routes
+  get 'home/search' => 'home#search'
+
 
   # 회원가입 완료했을때
   get 'user/join_complete'
