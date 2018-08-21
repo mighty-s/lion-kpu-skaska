@@ -9,7 +9,7 @@
 
   <div class="notify_show_title">
     <p class="title"><%=@noti.title%></p>
-    <p><%=@noti.update_at</p>
+    <p><%= @noti.created_at.to_datetime.strftime("%Y.%m.%d.%H:%M")%></p>
   </div>
 
   <div class="notify_show_content">

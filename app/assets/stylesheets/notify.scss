@@ -62,7 +62,7 @@
   }
 }
 
-///////////////// show.html.erb의 scss 부
+///////////////// show.html.erb의 scss 부분
 
 #notify_show_head_div
 {
@@ -84,6 +84,11 @@
   {
     padding-top:60px;
     border-bottom:1px solid #2E2F30;
+    .title
+    {
+      font-size: 35px;
+      margin-bottom:10px;
+    }
   }
 
   .notify_show_content
