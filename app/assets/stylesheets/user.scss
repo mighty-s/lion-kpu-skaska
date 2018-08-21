@@ -616,3 +616,97 @@
 
 
 /////////////////
+
+//로그인 css
+
+
+
+.sgg {
+  vertical-align: middle;
+
+  .sgg-login {
+    width: 400px;
+    margin: 60px auto 0;
+    background-color: white;
+  }
+
+  .email {
+    margin: 10px 0 30px;
+    height:40px;
+    width:400px;
+  }
+
+  .pw {
+    margin: 10px 0 0;
+    height:40px;
+    width:400px;
+  }
+
+  .sgg-login-button {
+    width: 200px;
+    height: 50px;
+    margin: 40px 100px 30px;
+    background-color: #000;
+    color: white;
+  }
+
+  .find {
+    text-decoration: underline;
+    margin: 0 65px;
+    color: black;
+  }
+
+}
+
+
+///////////////
+
+//////////////회원가입 css
+
+.join
+{
+  width:500px;
+  margin:60px auto 50px;
+
+  .title
+  {
+    margin:0 150px;
+    font-size:2em;
+    font-weight: bold;
+  }
+
+  .email
+  {
+    border-width: 0 0 1px 0;
+    width:100%;
+    margin:50px 0 20px;
+  }
+
+  .pw
+  {
+    border-width: 0 0 1px 0;
+    width:100%;
+    margin:10px 0 20px;
+  }
+
+  .pw-re
+  {
+    border-width: 0 0 1px 0;
+    width:100%;
+    margin:10px 0 20px;
+  }
+
+  .next
+  {
+    width: 200px;
+    height: 50px;
+    margin: 40px 150px 30px;
+    background-color : #000;
+    color : white;
+  }
+}
+
+
+
+
+
