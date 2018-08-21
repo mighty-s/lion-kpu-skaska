@@ -1,4 +1,9 @@
+// Place all the styles related to the sggcontroller here.
+// They will automatically be included inapplication.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+////게시물 show의 css/////
 .show{
 
   .left
@@ -241,6 +246,7 @@
     padding-bottom: 12px;
     border-radius: 40px;
     width: 110px;
+
   }
 
 } //right_title_left 끝
@@ -295,23 +301,28 @@
 {
   .comment-see
   {
+    background:url(see.png) no-repeat;
     float:left;
-    width:30px;
+    width:60px;
     margin-right:10px;
+    text-align:right;
   }
 
   .comment-like
   {
+    background:url(like.png) no-repeat;
     float:left;
-    width:30px;
-    margin-right:10px;
+    width:60px;
+    margin-right:15px;
+    text-align:right;
   }
 
   .comment-number
   {
+    background:url(comment.png) no-repeat;
     float:left;
-    width:30px;
-    margin-right:10px;
+    width:50px;
+    text-align:right;
   }
 } //see-like-number 끝
 
@@ -322,15 +333,8 @@
 
   .save-name
   {
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #46fc09;
-    color: white;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 12px;
-    width: 60px;
-    height:20px;
+    width: 48px;
+    height:77px;
   } // 이미지 받아서 input 하자
 } // collection-save 끝
 
@@ -355,7 +359,7 @@
     height:40px;
     width:40px;
     margin-right:20px;
-    background: url(instagram.jpeg) no-repeat;
+    background: url(instagram.png) no-repeat;
   }
 
   .twitter
@@ -365,7 +369,7 @@
     height:40px;
     width:40px;
     margin-right:20px;
-    background: url(twitter.jpeg) no-repeat;
+    background: url(twitter.png) no-repeat;
   }
 
   .kakao-story
@@ -374,12 +378,34 @@
     border-radius:50%;
     height:40px;
     width:40px;
-    background: url(kakao_stroy.jpeg) no-repeat;
+    background: url(kakao-stroy.png) no-repeat;
   }
 } //share 끝
 
+::-webkit-input-placeholder { /* 크롬 4?56 */
+  color: #cbcbcb;;
+}
+:-moz-placeholder { /* 파이어폭스 4?18 */
+  color: #cbcbcb;;
+  opacity:  1;
+}
+::-moz-placeholder { /* 파이어폭스 19?50 */
+  color: #cbcbcb;;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* 인터넷 익스플로러 10+ */
+  color:  #cbcbcb;;
+}
+::placeholder { /* 파이어폭스 51+, 크롬 57+ */
+  color: #cbcbcb;
+  opacity:  1;
+}
 
-//recipe new >>
+
+
+/////////게시물 css 끝///////
+
+///////게시물 작성 css///////
 
 
 .write
@@ -486,32 +512,9 @@
 
 }
 
-::-webkit-input-placeholder { /* 크롬 4?56 */
-  color: #cbcbcb;;
-}
-:-moz-placeholder { /* 파이어폭스 4?18 */
-
-  color: #cbcbcb;;
-  opacity:  1;
-}
-::-moz-placeholder { /* 파이어폭스 19?50 */
-  color: #cbcbcb;;
-  opacity:  1;
-}
-:-ms-input-placeholder { /* 인터넷 익스플로러 10+ */
-  color:  #cbcbcb;;
-}
-::placeholder { /* 파이어폭스 51+, 크롬 57+ */
-  color: #cbcbcb;
-  opacity:  1;
-}
+////게시물 작성 css 끝 ////
 
 
-
-
-
-
-/////////
 
 
 

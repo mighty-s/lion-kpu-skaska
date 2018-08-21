@@ -6,6 +6,9 @@
 # 비밀번호는 암호화 되어있다
 #
 class User < ApplicationRecord
+  #외래키 설정 1:N
+  has_many :notices
+
   # 비밀번호 암호화 (bcrypt gem)
   has_secure_password
 
@@ -21,5 +24,6 @@ class User < ApplicationRecord
 
     user if !user.nil? && user.authenticate(pw)
   end
+
 
 end

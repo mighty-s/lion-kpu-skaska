@@ -4,37 +4,22 @@
 
 <div id="notify_show_head_div">
   <div class="gotolist">
-    <a href="/notify/index">목록으로</a>
+    <a href="/notice">목록으로</a>
   </div>
 
   <div class="notify_show_title">
-    <p class="title">스까스까 오픈 기념 이벤트~!</p>
-    <p>시간임미다 ㅎㅎ헤헤</p>
+    <p class="title"><%=@noti.title%></p>
+    <p><%=@noti.update_at</p>
   </div>
 
-
   <div class="notify_show_content">
-    <p>편견을 바꾸고 부시고 섞어버리는 음식들의 새로운 조합!
-    나만의 새로운 레시피를 뽐낼 수 있는 공유 커뮤니티 사이트!
-      스까스까 페이지가 오픈하였습니다.(짝짝짝짝)</p>
-
-    <p>
-      [오픈 기념 이벤트]
-      회원가입 시 신규스까님들에게 스까포인트 100점을 드리며
-      스까를 등록하고 SNS에 공유한 주소를 댓글에 남기시면
-      추첨을 통해 11명에게 에어팟을 드립니다!!</p>
-
-    <p>
-      많은 사랑과 관심을 부탁드립니다. 뿅</p>
-    <p>
-      -이벤트 기간 : 8월 24일부터 9월 30일까지</p>
+    <p><%= @noti.content %></p>
   </div>
 
   <div class="comment_box">
     <div class="comment_count">
     <p>댓글 0개~ </p>
     </div>
-
 
     <div class="comment_content">
       <form action="">

@@ -1,5 +1,7 @@
-#
 # 유저의 세션 관련한 모듈
+#
+# @author sight
+# @date   2018.08.21
 #
 module SessionUsersHelper
   # 유저를 로그인 시키는 함수
@@ -28,4 +30,14 @@ module SessionUsersHelper
   def user_loged_in?
     !session[:user].nil?
   end
+
+  # 로그인한 유저가 관리자인지 판별하는 함수
+  # 설동민 지음(공저 송은주)
+  #
+  # @return turn  -> 유저가 관리자일 때
+  # @return false -> 유저가 관리자가 아닐때
+  def user_admin?
+    user_loged_in? && session[:user]['grade'] == 'admin' ? true : false
+  end
+
 end
