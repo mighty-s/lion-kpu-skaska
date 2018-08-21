@@ -609,6 +609,28 @@ article
   }
 }
 
+#wrap_c{
+  margin-top:40px;
+  padding: 0px;
+  img{
+    width: 100%;
+  }
+
+  .complete_text{
+    position: relative;
+    top: -500px;
+    text-align: center;
+    h1{
+      font-size: 40px;
+      margin: 15px;
+    }
+    p{
+      margin: 40px 0px;
+      font-weight: bold;
+      color: #5c5c5c;
+    }
+  }
+}
 
 
 
@@ -875,6 +897,7 @@ article
     .text {
       width: 100%;
       height:100%;
+      text-align: left;
       margin: 15px 0 0 0;
       resize: none;
     }
@@ -913,13 +936,26 @@ article
 
 .gender-button
 {
-  input
-  {
-    width:165px;
-    height:40px;
-    font-weight:bold;
-    background-color:white;
-
+  padding-bottom: 5px;
+  text-align: center;
+  input[type=radio]{
+    display: none;
+    margin: 10px;
+  }
+  input[type=radio] + label{
+    display: inline-block;
+    padding: 8px 19px;
+    width: 100px;
+    height: 30px;
+    margin-right: -1px;
+    text-align: center;
+    border: 1px solid black;
+    float: left;
+    border-collapse: collapse;
+    vertical-align: middle;
+    p{
+      font-size: 18px;
+    }
   }
 }
 
@@ -946,10 +982,15 @@ article
     height:50px;
   }
 }
-
-
-
-
-
-
+.update_button{
+  text-align: center;
+  .complete_button{
+    display: inline-block;
+    background-color: black;
+    width: 250px;
+    height: 60px;
+    color: white;
+    border: none;
+  }
+}
 
