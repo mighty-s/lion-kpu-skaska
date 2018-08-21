@@ -1,8 +1,8 @@
-#
 # 유저와 관련된 session들을 관리하는 컨트롤러
 # 자세한 로직은 SessionUsersHelper.rb에 정의됨 --> ApplicationController에서 전역으로 include함
 #
 class SessionUsersController < ApplicationController
+
   # 유저가 로그인 시도시, 로그인 가능하면 값 할당,
   # 불가능할 경우 로그인 창으로 되돌려 보낸다
   #

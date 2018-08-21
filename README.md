@@ -1,24 +1,7 @@
-# README
+# 스까스까
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+호엥엥
 
-Things you may want to cover:
+* 모두모두 힘내서 열심히 합시다
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 눙물의 리드미
