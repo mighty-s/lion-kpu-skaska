@@ -709,4 +709,247 @@
 
 
 
+///////////////////
+///////회원가입2css//
+
+.my_page {
+  width: 500px;
+  margin: 60px auto;
+
+  .title {
+    margin: 0 200px;
+    font-size:2em;
+    font-weight: bold;
+  }
+
+
+  .nickname
+  {
+    border : 0px;
+    border-bottom : 2px solid #cfcfcf;
+    width:100%;
+    margin:20px 0;
+  }
+
+  .name
+  {
+    border : 0px;
+    border-bottom : 2px solid #cfcfcf;
+    width:100%;
+    margin:20px 0;
+  }
+
+  .phone
+  {
+    border : 0px;
+    border-bottom : 2px solid #cfcfcf;
+    width:100%;
+    margin:20px 0;
+  }
+
+  .gender
+  {
+    border : 0px;
+    border-bottom : 2px solid #cfcfcf;
+    width:100%;
+    text-align:left;
+
+    span
+    {
+      position:relative;
+      top:10px;
+    }
+
+    .gender-button
+    {
+      float:right;
+      margin: 5px 0 5px 0;
+    }
+
+    &::after
+    {
+      content:'';
+      display:block;
+      clear:both;
+    }
+
+
+  }
+
+  .birth
+  {
+    border : 0px;
+    border-bottom : 2px solid #cfcfcf;
+    width:100%;
+    margin:20px 0;
+    text-align:left;
+
+    span
+    {
+      position:relative;
+      top:20px;
+    }
+
+    .birth-combo
+    {
+      float:right;
+      margin: 5px 0 5px 0;
+    }
+
+    &::after
+    {
+      content:'';
+      display:block;
+      clear:both;
+    }
+
+  }
+
+  .job
+  {
+    border : 0px;
+    border-bottom : 2px solid #cfcfcf;
+    width:100%;
+    text-align:left;
+
+    span
+    {
+      position:relative;
+      top:20px;
+    }
+
+    .job-combo
+    {
+      float:right;
+      margin: 5px 0 5px 0;
+    }
+
+    &::after
+    {
+      content:'';
+      display:block;
+      clear:both;
+    }
+
+  }
+
+  .food
+  {
+    border : 0px;
+    border-bottom : 2px solid #cfcfcf;
+    width:100%;
+    text-align:left;
+    margin : 20px 0 80px 0 ;
+
+    span
+    {
+      position:relative;
+      top:20px;
+    }
+
+    .food-combo
+    {
+      float:right;
+      margin: 5px 0 5px 0;
+    }
+
+    &::after
+    {
+      content:'';
+      display:block;
+      clear:both;
+    }
+
+  }
+
+  .mine {
+
+    .mine-title
+    {
+      border: 0px;
+      border-bottom: 2px solid #cfcfcf;
+      padding-bottom: 2px;
+      font-size:20px;
+    }
+
+    .text {
+      width: 100%;
+      height:100%;
+      margin: 15px 0 0 0;
+      resize: none;
+    }
+
+    .checkbox
+    {
+      margin:0 0 0 5px;
+    }
+
+    span
+    {
+      border: 0px;
+      border-bottom: 2px solid #cfcfcf;
+      padding-bottom: 2px;
+    }
+
+    .end {
+      width: 200px;
+      height: 50px;
+      margin: 60px 150px 30px;
+      background-color: #000;
+      color: white;
+    }
+  }
+
+  .img {
+    width: 100px;
+    height:100px;
+    border-radius: 50px; /* 이미지 반크기만큼 반경을 잡기*/
+    background-color:gray;
+    margin : 30px auto;
+  }
+
+}
+
+
+.gender-button
+{
+  input
+  {
+    width:165px;
+    height:40px;
+    font-weight:bold;
+    background-color:white;
+
+  }
+}
+
+.birth-combo
+{
+  select{
+    width:110px;
+    height: 50px;
+  }
+}
+
+.job-combo
+{
+  select{
+    width:110px;
+    height:50px;
+  }
+}
+
+.food-combo
+{
+  select{
+    width:110px;
+    height:50px;
+  }
+}
+
+
+
+
+
+
 
