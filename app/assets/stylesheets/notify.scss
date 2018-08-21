@@ -30,7 +30,7 @@
     .notify-title
     {
       font-size:20px;
-      padding-top:20px;
+      margin-top:20px;
       margin-left:20px;
       padding-bottom:10px;
     }
@@ -38,16 +38,16 @@
 
   .notify-one
   {
+    padding: 35px 0;
     border-bottom:1px solid #2E2F30;
     .notify-title
     {
       font-size: 20px;
+
       .notify-content
       {
-
         font-size:20px;
         padding-top:20px;
-        padding-bottom:10px;
       }
     }
   }
@@ -57,7 +57,6 @@
   {
     font-size:15px;
     margin-left:20px;
-    margin-bottom:20px;
 
   }
 }
