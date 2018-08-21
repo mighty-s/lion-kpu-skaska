@@ -22,9 +22,12 @@
     </div>
 
     <div class="comment_content">
-      <form action="">
-        <textarea class="comment" name="" id="" cols="30" rows="10"></textarea>
+      <form action="/comments" method="post">
+        <input type="hidden" value="<%= @token %>" name="authenticity_token">
+        <input type="hidden" name="notice_id" value="<%=params[:id]%>">
+        <textarea class="comment" name="comment_content" id="" cols="30" rows="10"></textarea>
         <input class="submit" type="submit" value="댓글스까">
+
         
       </form>
 

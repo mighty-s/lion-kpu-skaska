@@ -21,6 +21,7 @@ class NotifyController < ApplicationController
   end
 
   def show
+    @token = form_authenticity_token
     @noti = Notice.find params[:id]
   end
 end

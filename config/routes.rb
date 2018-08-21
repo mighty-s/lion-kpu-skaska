@@ -42,8 +42,13 @@ Rails.application.routes.draw do
 
   get 'notify/create'
 
-
   get 'recipe/new'
+
+  # Comment routes
+
+    #RecipeComment routes
+    #NoticeComment routes
+  post 'comments/' => 'comments#create'
 
   # Recipe routes
   get 'recipe/index'
