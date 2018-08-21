@@ -1,6 +1,87 @@
-<div>
-  <%=render 'commons/header' %>
-</div>
+<%=render 'commons/header' %>
+<form action="update" method="post">
+  <!-- 이전 페이지에서 넘어온 값 -->
+  <input type="hidden" name = "email" value="">
+  <input type="hidden" name = "pw"    value="">
+
+  <div class="my_page">
+    <span class="title">프로필</span>
+    <div class="img"></div>
+
+    <input name ="nickname" class="nickname" type="text" placeholder="사용하실 닉네임">
+    <input name ="name"     class="name"     type="text" placeholder="이름">
+    <input name ="phone"    class="phone"    type="text" placeholder="휴대폰 번호">
+
+    <div class="gender">
+      <span>성별</span>
+      <div class="gender-button">
+        <input id="man" name = "gender" type="radio" value="man"> <label for="man"><p>남자</p></label>
+        <input id="woman" name = "gender" type="radio" value="woman"> <label for="woman"><p>여자</p></label>
+      </div>
+    </div>
+
+    <div class="birth">
+      <span>생년월일</span>
+      <div class="birth-combo">
+        <select name="year" id="user_year_selection">
+          <option value="">태어난 연도</option>
+
+          <%2018.downto(1900) do |i|%>
+            <option value="<%=i%>>"><%=i%></option>
+          <%end%>
+
+        </select>
+
+        <select name="month">
+          <option value="">월</option>
+
+          <%for i in 1..12%>
+            <option value="<%=i%>>"><%=i%></option>
+          <%end%>
+
+        </select>
+
+        <select name="day">
+          <option value="">일</option>
+
+          <%for i in 1..31%>
+            <option value="<%=i%>>"><%=i%></option>
+          <%end%>
+
+        </select>
+      </div>
+    </div>
+
+    <div class="job">
+      <span>직업</span>
+      <div class="job-combo" >
+        <select name="job">
+          <option value="">선택하세요</option>
+          <option value="학생">학생</option>
+          <option value="회사원">회사원</option>
+          <option value="기타">기타</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="food">
+      <span>관심음식</span>
+      <div class="food-combo">
+        <select name="food">
+          <option value="">선택하세요</option>
+          <option value="한식">한식</option>
+          <option value="중식">중식</option>
+          <option value="일식">일식</option>
+          <option value="양식">양식</option>
+          <option value="기타">기타</option>
+        </select>
+      </div>
+    </div>
+    <div class="update_button">
+      <input class="complete_button" type="submit" value="수정하기">
+    </div>
+  </div><!-- .my_page end  -->
+</form>
 
 
 
