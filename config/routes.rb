@@ -38,5 +38,8 @@ Rails.application.routes.draw do
   # home에서 서치한거 찾았을때
   get 'home/searchResult'
 
+  # 회원가입 완료했을때
+  get 'user/join_complete'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
