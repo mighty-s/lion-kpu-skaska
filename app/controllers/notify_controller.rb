@@ -20,7 +20,6 @@ class NotifyController < ApplicationController
     end
   end
 
-
   def show
     @noti = Notice.find params[:id]
   end
