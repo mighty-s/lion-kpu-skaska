@@ -1,5 +1,6 @@
 class NotifyController < ApplicationController
   def index
+    @noti = Notice.all
   end
 
   def create
@@ -21,6 +22,6 @@ class NotifyController < ApplicationController
 
 
   def show
-    
+    @noti = Notice.find params[:id]
   end
 end
