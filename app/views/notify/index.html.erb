@@ -8,11 +8,10 @@
   <div class="notify-list">
     <% @noti.each do |notice| %>
       <div class="notify-one">
-        <p class="notify-title"><a href="/notice/<%=notice.id%>"><%=notice.title%></a></p>
-        <p class="notify-content">스까스까 관리자</p>
+        <a class="notify-title" href="/notice/<%=notice.id%>"><%=notice.title%></a>
+        <p class="notify-content">대장스까</p>
       </div>
     <% end %>
-
     <div class="create_notify">
       <% if user_admin? %>
       <a href="/notify/create">작성</a>

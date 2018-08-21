@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'comments/create'
+
+  get 'comments/destroy'
+
   root 'home#index'
 
   # Home routes
@@ -38,8 +42,15 @@ Rails.application.routes.draw do
 
   get 'notify/create'
 
-
   get 'recipe/new'
+
+  # Comment routes
+
+    #RecipeComment routes
+    #NoticeComment routes
+  post 'comments/' => 'comments#create'
+
+  delete 'comments/:id' => 'comments#destroy'
 
   # Recipe routes
   get 'recipe/index'

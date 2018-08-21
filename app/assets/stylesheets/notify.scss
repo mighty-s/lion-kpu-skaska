@@ -30,7 +30,7 @@
     .notify-title
     {
       font-size:20px;
-      padding-top:20px;
+      margin-top:20px;
       margin-left:20px;
       padding-bottom:10px;
     }
@@ -38,16 +38,16 @@
 
   .notify-one
   {
+    padding: 35px 0;
     border-bottom:1px solid #2E2F30;
     .notify-title
     {
       font-size: 20px;
+
       .notify-content
       {
-
         font-size:20px;
         padding-top:20px;
-        padding-bottom:10px;
       }
     }
   }
@@ -57,12 +57,11 @@
   {
     font-size:15px;
     margin-left:20px;
-    margin-bottom:20px;
 
   }
 }
 
-///////////////// show.html.erb의 scss 부
+///////////////// show.html.erb의 scss 부분
 
 #notify_show_head_div
 {
@@ -84,6 +83,11 @@
   {
     padding-top:60px;
     border-bottom:1px solid #2E2F30;
+    .title
+    {
+      font-size: 35px;
+      margin-bottom:10px;
+    }
   }
 
   .notify_show_content
@@ -125,6 +129,28 @@
       display:block;
       claer:both;
     }
+
+  }
+
+  .comment_nickname
+  {
+    display:inline-block;
+    font-size:20px;
+    padding:20px 0;
+  }
+
+  .comment_upload_time
+  {
+    display:inline-block;
+    font-size:15px;
+    margin-bottom:20px;
+  }
+
+  .comment_content
+  {
+    font-size:17px;
+    border-bottom:1px solid #2E2F30;
+    padding-bottom:20px;
   }
 }
 
@@ -139,7 +165,8 @@
     background-color:#2E2F30;
   }
 }
-/////////create.scss
+
+/////////////create.scss
 
 #n_create
 {
