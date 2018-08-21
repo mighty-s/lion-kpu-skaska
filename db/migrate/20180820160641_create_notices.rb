@@ -4,7 +4,6 @@
 #
 # 공지 테이블 생성
 #
-#
 class CreateNotices < ActiveRecord::Migration[5.1]
   def change
     create_table :notices do |t|
