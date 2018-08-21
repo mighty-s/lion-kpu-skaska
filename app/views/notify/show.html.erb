@@ -18,7 +18,7 @@
 
   <div class="comment_box">
     <div class="comment_count">
-    <p>댓글 0개~ </p>
+    <p>댓글 <%= @count_comment %>개</p>
     </div>
 
     <div class="comment_content">
@@ -29,7 +29,6 @@
         <input class="submit" type="submit" value="댓글스까">
       </form>
 
-      <div class="space-div-box"></div>
       <% @comments.each do |comment| %>
         <a href='/comments/<%=comment.id%>' data-confirm='진짜 삭제하시게쓰까?' data-method='DELETE'>X</a>
         <p class="comment_nickname"><%= @session_nickname %> </p>
