@@ -4,9 +4,7 @@ class NotifyController < ApplicationController
 
   def create
     @token = form_authenticity_token
-
     puts params
-
   end
 
   def show
