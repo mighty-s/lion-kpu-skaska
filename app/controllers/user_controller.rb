@@ -9,6 +9,17 @@ class UserController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.nickname=params[:nickname]
+    @user.name= params[:name]
+    @user.phone= params[:phone]
+    @user.gender= params[:gender]
+    @user.save
+    redirect_to '/'
   end
 
   def mypage

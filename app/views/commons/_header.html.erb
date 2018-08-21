@@ -1,33 +1,34 @@
-<div id="main-header">
+<div id="main-header" class="main-header">
 
-  <div class = "a">
-    <nav class="top-menu" >
-      <ul class="high-top-bar">
-        <li><a class="menulink" href="/notice">공지사항</a></li>
+  <nav class="top-menu" >
+    <ul>
+      <li><a class="menulink" href="/notice">공지사항</a></li>
 
-        <%if user_loged_in?%>
-          <li><a class="menulink" href="/user/mypage">마이페이지</a></li>
-          <li><p><%=session[:user]['nickname']%></p></li>
-          <li><%=link_to session_users_path(session[:user]['id']), method: "delete", class: "menulink" do%>
-                로그아웃 <%end%>
-          </li>
-        <%else%>
-          <li><a class="menulink" href="/user/join">회원가입</a></li>
-          <li><a class="menulink" href="/user/login">로그인</a></li>
-        <%end%>
+      <%if user_loged_in?%>
+        <li><a class="menulink" href="/user/mypage">마이페이지</a></li>
+        <li><%=link_to session_users_path(session[:user]['id']), method: "delete", class: "menulink" do%>
+            로그아웃 <%end%>
+        </li>
+        <li><p><%=session[:user]['nickname']%></p></li>
+      <%else%>
+        <li><a class="menulink" href="/user/join">회원가입</a></li>
+        <li><a class="menulink" href="/user/login">로그인</a></li>
+      <%end%>
 
-      </ul>
-    </nav>
-  </div>
+    </ul>
+  </nav>
 
-  <div class="main-logo">
-    <a href="/home/index">스까..</a>
-  </div>
-  <div class="submit-button">
-    <a href="<%=new_recipe_path%>" class="write">등록하기</a>
-    <form>
-      <input class="search-button" type="submit" value="검색~">
-      <input class="search-text" type="text" name="" id="">
+  <div class="bottom-menu">
+
+    <a href="/recipe/new"><span class="write">등록</span></a>
+
+    <a href="/home/index"><%=image_tag 'logo.jpg' ,class:"logo_image"%></a>
+
+    <form action="/home/search">
+      <input class="search-button" type="submit" value="검색">
+      <input class="search-text" type="text" name="search_keyword" id="">
     </form>
+
   </div>
+
 </div>

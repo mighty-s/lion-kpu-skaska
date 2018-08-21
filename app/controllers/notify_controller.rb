@@ -20,8 +20,11 @@ class NotifyController < ApplicationController
     end
   end
 
-
   def show
+    @token = form_authenticity_token
     @noti = Notice.find params[:id]
+    @count_comment = @noti.comment_notices.count
+    @comments = @noti.comment_notices
+    @session_nickname = session[:user]['nickname']
   end
 end

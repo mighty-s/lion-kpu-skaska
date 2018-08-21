@@ -3,27 +3,24 @@
 </div>
 
 <div class="main-picture-boxes">
-
-  <a class="main-picture" href="<%=recipes_path%>">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-  <a class="main-picture" href="">클릭해봐용!!!!</a>
-
+  <% for i in 1..10%>
+    <div class="picture-on">
+      <div class="picture-main">
+        <a href="/recipe/index">클릭해봐용!!!!</a>
+      </div>
+      <div class="picture-name">
+        <p class="recipe">마크정식</p>
+        <p class="nickname">장준범</p>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 <div class="bottom-box">
   <div class="best-left">
     <div class="best-3">
       <p>BEST-3</p>
-      <a href="" class="best-more">more..</a>
+      <a href="" class="#">more..</a>
     </div>
     <div class="best-box">
       1위~

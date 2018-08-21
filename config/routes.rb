@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'comments/create'
+
+  get 'comments/destroy'
+
   root 'home#index'
 
   # Home routes
@@ -12,7 +16,7 @@ Rails.application.routes.draw do
 
   get 'user/login'
 
-  get 'user/edit'
+  get 'user/edit/:id' => 'user#edit'
 
   post 'user/join_two'
 
@@ -38,14 +42,26 @@ Rails.application.routes.draw do
 
   get 'notify/create'
 
+  # Comment routes
+
+    #RecipeComment routes
+    #NoticeComment routes
+  post 'comments/' => 'comments#create'
+
+  delete 'comments/:id' => 'comments#destroy'
+
   # Recipe routes
   resources :recipes
 
-  # home에서 서치한거 찾았을때
-  get 'home/searchResult'
+  # Home routes
+  get 'home/search' => 'home#search'
+
 
   # 회원가입 완료했을때
   get 'user/join_complete'
+
+  # 수정
+  post 'user/update'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
