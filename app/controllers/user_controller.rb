@@ -14,7 +14,6 @@ class UserController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.nickname=params[:nickname]
     @user.name= params[:name]
     @user.phone= params[:phone]
     @user.gender= params[:gender]
@@ -52,5 +51,8 @@ class UserController < ApplicationController
 
   def join_complete
     @nickname = params[:nickname]
+    if @nickname == nil
+      redirect_back fallback_location: '/'
+    end
   end
 end
