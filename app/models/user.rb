@@ -8,6 +8,7 @@
 class User < ApplicationRecord
   #외래키 설정 1:N
   has_many :notices
+  has_many :recipes
 
   # 비밀번호 암호화 (bcrypt gem)
   has_secure_password

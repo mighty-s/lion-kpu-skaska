@@ -30,3 +30,6 @@
 
 # 아치리눅스 디랙토리 관련 파일 제외
 .directroty
+
+# public 폴더에 올라간 업로드된 이미지 무시
+publc/uploads/recipe_image/image/*

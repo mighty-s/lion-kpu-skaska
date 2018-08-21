@@ -38,11 +38,8 @@ Rails.application.routes.draw do
 
   get 'notify/create'
 
-
-  get 'recipe/new'
-
   # Recipe routes
-  get 'recipe/index'
+  resources :recipes
 
   # home에서 서치한거 찾았을때
   get 'home/searchResult'
