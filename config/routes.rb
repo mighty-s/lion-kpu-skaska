@@ -22,19 +22,33 @@ Rails.application.routes.draw do
   resource :session_users, only: %i[create destroy]
 
   # Notify routes
-  get 'notify/index'
+
+    #notify-read
+  get 'notify/' => 'notify#index'
+
+  get 'notice/' => 'notify#index'
+
+  get 'notice/:id' => 'notify#show'
+
+    #notify-create
+
+  post 'notice/' => 'notify#new'
 
   get 'notify/show'
 
   get 'notify/create'
 
-  post 'notify/index'
 
   get 'recipe/new'
 
   # Recipe routes
   get 'recipe/index'
 
+  # home에서 서치한거 찾았을때
+  get 'home/searchResult'
+
+  # 회원가입 완료했을때
+  get 'user/join_complete'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

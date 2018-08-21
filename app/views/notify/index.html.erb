@@ -4,31 +4,14 @@
 
 <div class="notify-box">
   <p class="notification">공지사항</p>
+
   <div class="notify-list">
-    <div class="notify-one">
-      <p class="notify-title"><a href="/notify/show">스까스까 페이지 오픈기념 이벤트</a></p>
-      <p class="notify-content">안녕 바보야~</p>
-    </div>
-    <div class="notify-one">
-      <p class="notify-title"><a href="#">스까스까 페이지 오픈기념 이벤트</a></p>
-      <p class="notify-content">안녕 바보야~</p>
-    </div>
-    <div class="notify-one">
-      <p class="notify-title"><a href="#">스까스까 페이지 오픈기념 이벤트</a></p>
-      <p class="notify-content">안녕 바보야~</p>
-    </div>
-    <div class="notify-one">
-      <p class="notify-title"><a href="#">스까스까 페이지 오픈기념 이벤트</a></p>
-      <p class="notify-content">안녕 바보야~</p>
-    </div>
-    <div class="notify-one">
-      <p class="notify-title"><a href="#">스까스까 페이지 오픈기념 이벤트</a></p>
-      <p class="notify-content">안녕 바보야~</p>
-    </div>
-    <div class="notify-one">
-      <p class="notify-title"><a href="#">스까스까 페이지 오픈기념 이벤트</a></p>
-      <p class="notify-content">안녕 바보야~</p>
-    </div>
+    <% @noti.each do |notice| %>
+      <div class="notify-one">
+        <p class="notify-title"><a href="/notice/<%=notice.id%>"><%=notice.title%></a></p>
+        <p class="notify-content">스까스까 관리자</p>
+      </div>
+    <% end %>
 
     <div class="create_notify">
       <% if user_admin? %>
