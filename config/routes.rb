@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     #notify-read
   get 'notify/' => 'notify#index'
 
-  get 'notices/' => 'notify#index'
+  get 'notice/' => 'notify#index'
 
   get 'notify/show'
 
