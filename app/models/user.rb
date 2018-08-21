@@ -21,7 +21,6 @@ class User < ApplicationRecord
   # @return nil   위 두 조건 중 하나라도 안될 때,
   def self.login_available(email, pw)
     user = User.find_by(email: email.to_s)
-
     user if !user.nil? && user.authenticate(pw)
   end
 

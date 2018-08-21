@@ -5,9 +5,15 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# pry for rails         / add : sdm , date : 2018.8.19
+# for file-upload to aws-s3 instance    / add : sdm , date : 2018.8.21
+gem 'fog-aws'
+# for control size of image             / add : sdm , date : 2018.8.21
+gem 'mini_magick'
+# for file-upload                       / add : sdm , date : 2018.8.21
+gem 'carrierwave'
+# pry for rails                         / add : sdm , date : 2018.8.19
 gem 'pry-rails'
-# Bootstrap             / add : sdm , date : 2018.8.14
+# Bootstrap                             / add : sdm , date : 2018.8.14
 gem 'bootstrap', '~> 4.1.1'
 # JQuery                / add : sdm , date : 2018.8.14
 gem 'jquery-rails'

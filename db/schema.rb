@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180820160641) do
     t.string "name"
     t.string "phone"
     t.string "gender"
+    t.string "grade"
     t.string "status", default: "normal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
