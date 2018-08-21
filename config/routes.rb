@@ -22,13 +22,22 @@ Rails.application.routes.draw do
   resource :session_users, only: %i[create destroy]
 
   # Notify routes
-  get 'notify/index'
+
+    #notify-read
+  get 'notify/' => 'notify#index'
+
+  get 'notice/' => 'notify#index'
+
+  get 'notice/:id' => 'notify#show'
+
+    #notify-create
+
+  post 'notice/' => 'notify#new'
 
   get 'notify/show'
 
   get 'notify/create'
 
-  post 'notify/index'
 
   get 'recipe/new'
 

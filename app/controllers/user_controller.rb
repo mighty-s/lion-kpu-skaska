@@ -36,7 +36,6 @@ class UserController < ApplicationController
       phone: params[:phone],
       gender: params[:gender]
     )
-
     redirect_to '/'
   end
 end
