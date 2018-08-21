@@ -27,10 +27,12 @@
         <input type="hidden" name="notice_id" value="<%=params[:id]%>">
         <textarea class="comment" name="comment_content" id="" cols="30" rows="10"></textarea>
         <input class="submit" type="submit" value="댓글스까">
-
-        
       </form>
 
+      <% @comments.each do |comment| %>
+        <p><%= comment.content %> </p>
+        <a href='/comments/<%=comment.id%>' data-confirm='진짜 삭제하시게쓰까?' data-method='DELETE'>x</a>
+      <% end %>
     </div>
   </div>
 </div>
