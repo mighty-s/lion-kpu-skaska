@@ -1,26 +1,28 @@
 Rails.application.routes.draw do
-# -------- 고주원이 설정한 라우트 -------------
-  
-  
+
   root 'home#index'
 
-# --------- 기존 master branch routes ------------
-  
-  get 'recipe/index'
+  # Home routes
+  get 'home/index'
+
+  # User routes
+  get 'user/join'
+
+  get 'user/mypage'
 
   get 'user/login'
 
   get 'user/edit'
 
-  get 'notify/index'
-
-  get 'home/index'
-
-  get 'user/join'
-
-  get 'user/mypage'
-
   post 'user/join_two'
+
+  post 'user/create'
+
+  # SessionUsers routes
+  resource :session_users, only: %i[create destroy]
+
+  # Notify routes
+  get 'notify/index'
 
   get 'notify/show'
 
@@ -28,6 +30,10 @@ Rails.application.routes.draw do
 
   post 'notify/index'
 
+  get 'recipe/new'
+
+  # Recipe routes
+  get 'recipe/index'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

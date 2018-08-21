@@ -3,11 +3,18 @@
   <div class = "a">
     <nav class="top-menu" >
       <ul class="high-top-bar">
-
         <li><a class="menulink" href="/notify/index">공지사항</a></li>
-        <li><a class="menulink" href="/user/mypage">마이페이지</a></li>
-        <li><a class="menulink" href="/user/join">회원가입</a></li>
-        <li><a class="menulink" href="/user/login">로그인</a></li>
+
+        <%if user_loged_in?%>
+          <li><a class="menulink" href="/user/mypage">마이페이지</a></li>
+          <li><p><%=session[:user]['nickname']%></p></li>
+          <li><%=link_to session_users_path(session[:user]['id']), method: "delete", class: "menulink" do%>
+                로그 아웃 <%end%>
+          </li>
+        <%else%>
+          <li><a class="menulink" href="/user/join">회원가입</a></li>
+          <li><a class="menulink" href="/user/login">로그인</a></li>
+        <%end%>
 
       </ul>
     </nav>
@@ -17,11 +24,9 @@
     <a href="/">스까~</a>
   </div>
   <div class="submit-button">
-    <form>
-      <input type="submit" class="enter_button" value="등록">
-      <input class="search-button" type="submit" value="검색">
+    <a href="/recipe/new" class="write">등록</a>
+      <input class="search-button" type="submit" value="검색~">
       <input class="search-text" type="text" name="" id="">
-
     </form>
   </div>
 

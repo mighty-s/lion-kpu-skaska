@@ -300,6 +300,7 @@
 
 .profile
 {
+
   .top
   {
     background-color:white;
@@ -311,6 +312,7 @@
     margin: 0 auto;
     background-color: #e6e6e6;
     padding:15px;
+
   }
 }
 
@@ -362,6 +364,7 @@
     float:left;
     padding:10px;
     background-color:white;
+
   }
 
 
@@ -386,68 +389,121 @@
   }
 }//bottom 끝
 
-.left_nav
-{
-  width : 100%;
-  text-align : center;
-  border-bottom: 1px solid #cfcfcf;
 
-  .left_nav_header
+
+.left
+{
+  ::-webkit-scrollbar
   {
-    height : 45px;
-    line-height : 37px;
-
-    &::after
-    {
-      content:"";
-      display:block;
-      clear:both;
-    }
+    width:8px;
+    height:8px;
   }
 
-} //left_nav 끝
+  ::-webkit-scrollbar-button:start:decrement
+  {
+    display:none;
+  }
 
-.left_nav_header
-{
+  ::-webkit-scrollbar-button:end:increment
+  {
+    display:none;
+  }
 
-  li {
+  ::-webkit-scrollbar-track
+  {
+    background:white;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    height:50px;
+    width:50px;
+    background: #5c5c5c;
+    border-radius:8px;
+  }
+
+  input
+  {
+    display:none;
+  }
+
+  label {
     display: inline-block;
-    margin-right:5%;
-    width:200px;
-    color:gray;
-    font-size:20px;
-    font-weight:bold;
+    padding-bottom:10px;
+    margin-left: 8%;
+    width: 200px;
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
     font-family: 'Jua', sans-serif;
-
-    .nav_click
-    {
-      display:none;
-    }
-
+    text-align:center;
   }
 
-  li:hover
+  label:hover
   {
     border-bottom : 5px solid #5ddc01;
   }
 
 
-}
+  article
+  {
+    border-top: 1px solid #cfcfcf;
+    width: 100%;
+    height: 270px;
+    overflow-y: scroll;
+    display:none;
+  }
 
 
 
-.contents {
-  width: 100%;
-  height: 270px;
-  overflow-y: scroll;
 
-  .floor {
-    height:60%;
-    margin-bottom: 50px;
+  #tab1:checked ~ .content1
+  {
     display:block;
   }
 
-}
+  #tab1:checked ~ .label1
+  {
+    border-bottom : 5px solid #5ddc01;
+  }
+
+  #tab2:checked ~ .content2
+  {
+    display:block;
+  }
+
+  #tab2:checked ~ .label2
+  {
+    border-bottom : 5px solid #5ddc01;
+  }
+
+  #tab3:checked ~ .content3
+  {
+    display:block;
+  }
+
+  #tab3:checked ~ .label3
+  {
+    border-bottom : 5px solid #5ddc01;
+  }
+
+
+  &::after
+  {
+    content:"";
+    display:block;
+    clear:both;
+  }
+
+}//left 끝
+
+
+
+
+
+
 
 .floor
 {
@@ -532,15 +588,18 @@
 
   .interest_title
   {
+    float:left;
     display:inline-block;
   }
 
-  .interest_all {
+  .interest_all
+  {
+    float:right;
     display:inline-block;
     font-size: 10px;
     color: gray;
-    margin-left: 180px;
   }
+
 
   &::after
   {
@@ -549,8 +608,6 @@
     clear:both;
   }
 }
-
-
 
 
 
