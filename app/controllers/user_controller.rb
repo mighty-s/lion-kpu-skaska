@@ -36,6 +36,10 @@ class UserController < ApplicationController
       phone: params[:phone],
       gender: params[:gender]
     )
-    redirect_to '/'
+    redirect_to action: 'join_complete', nickname: params[:nickname]
+  end
+
+  def join_complete
+    @nickname = params[:nickname]
   end
 end
