@@ -16,13 +16,14 @@
   .notify-list
   {
     border-top:1px solid #2E2F30;
-    border-bottom: 1px solid #2E2F30;
     width:100%;
     height:800px;
   }
 
   .notify-one
   {
+    padding: 35px 0;
+    border-bottom:1px solid #2E2F30;
     &:hover
     {
       background-color:#BBBBBB;
@@ -34,30 +35,19 @@
       margin-left:20px;
       padding-bottom:10px;
     }
-  }
-
-  .notify-one
-  {
-    padding: 35px 0;
-    border-bottom:1px solid #2E2F30;
-    .notify-title
+    .notify-content
     {
-      font-size: 20px;
+      font-size:15px;
+      padding-top:20px;
+      margin-left:20px;
 
-      .notify-content
-      {
-        font-size:20px;
-        padding-top:20px;
-      }
     }
   }
 
 
+
   .notify-content
   {
-    font-size:15px;
-    margin-left:20px;
-
   }
 }
 
