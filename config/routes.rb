@@ -22,7 +22,11 @@ Rails.application.routes.draw do
   resource :session_users, only: %i[create destroy]
 
   # Notify routes
-  get 'notify/index'
+
+    #notify-read
+  get 'notify/' => 'notify#index'
+
+  get 'notices/' => 'notify#index'
 
   get 'notify/show'
 
