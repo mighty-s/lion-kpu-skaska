@@ -1,3 +1,6 @@
+// Place all the styles related to the sggcontroller here.
+// They will automatically be included inapplication.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
 .show{
 
@@ -241,6 +244,7 @@
     padding-bottom: 12px;
     border-radius: 40px;
     width: 110px;
+
   }
 
 } //right_title_left 끝
@@ -295,23 +299,28 @@
 {
   .comment-see
   {
+    background:url(see.png) no-repeat;
     float:left;
-    width:30px;
+    width:60px;
     margin-right:10px;
+    text-align:right;
   }
 
   .comment-like
   {
+    background:url(like.png) no-repeat;
     float:left;
-    width:30px;
-    margin-right:10px;
+    width:60px;
+    margin-right:15px;
+    text-align:right;
   }
 
   .comment-number
   {
+    background:url(comment.png) no-repeat;
     float:left;
-    width:30px;
-    margin-right:10px;
+    width:50px;
+    text-align:right;
   }
 } //see-like-number 끝
 
@@ -322,15 +331,8 @@
 
   .save-name
   {
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #46fc09;
-    color: white;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 12px;
-    width: 60px;
-    height:20px;
+    width: 48px;
+    height:77px;
   } // 이미지 받아서 input 하자
 } // collection-save 끝
 
@@ -355,7 +357,7 @@
     height:40px;
     width:40px;
     margin-right:20px;
-    background: url(instagram.jpeg) no-repeat;
+    background: url(instagram.png) no-repeat;
   }
 
   .twitter
@@ -365,7 +367,7 @@
     height:40px;
     width:40px;
     margin-right:20px;
-    background: url(twitter.jpeg) no-repeat;
+    background: url(twitter.png) no-repeat;
   }
 
   .kakao-story
@@ -374,118 +376,9 @@
     border-radius:50%;
     height:40px;
     width:40px;
-    background: url(kakao_stroy.jpeg) no-repeat;
+    background: url(kakao-stroy.png) no-repeat;
   }
 } //share 끝
-
-
-//recipe new >>
-
-
-.write
-{
-  margin-top:80px;
-  width:100%;
-  height:100%;
-
-  .receipt_name
-  {
-    display:block;
-    height:30px;
-    width:80%;
-    margin:10px auto;
-    padding-left:10px;
-  }
-
-  .picture
-  {
-    display:block;
-    height: 100px;
-    width: 81%;
-    margin: 10px auto;
-    overflow-x:scroll;
-    overflow-y:hidden;
-    border: 1px solid #cfcfcf;
-  }
-
-  .receipt_content
-  {
-    display:block;
-    height:200px;
-    width:80%;
-    resize:none;
-    margin:10px auto;
-    padding-left:10px;
-  }
-
-  .receipt_tag
-  {
-    display:block;
-    height:30px;
-    width:80%;
-    margin:10px auto;
-    padding-left:10px;
-  }
-
-  .receipt_regist
-  {
-    margin:100px auto;
-    display:block;
-    height:50px;
-    width:200px;
-    background-color:#000;
-    color:white;
-  }
-
-  &::after
-  {
-    content:"";
-    clear:both;
-    display:block;
-  }
-
-}
-
-
-
-.picture {
-
-  .picture-wrap
-  {
-    height:100px;
-    width:1300px;
-
-  }
-
-  &::after
-  {
-    content:"";
-    clear:both;
-    display:block;
-  }
-
-}
-
-.picture-wrap
-{
-  display:block;
-
-  .receipt_picture {
-    width: 120px;
-    height:80px;
-    display: inline-block;
-    border: 1px solid #cfcfcf;
-  }
-
-  &::after
-  {
-    content:"";
-    clear:both;
-    display:block;
-  }
-
-}
-
 ::-webkit-input-placeholder { /* 크롬 4?56 */
   color: #cbcbcb;;
 }

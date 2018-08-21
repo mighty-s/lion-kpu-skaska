@@ -97,27 +97,27 @@ input{
 /* for Firefox */
 input::-moz-placeholder{
 	font-size : 17px;
-	font-weight: bold;
 	font-family: 'Hanna', serif;
+    color: #CCCCCC;
 }
 
 /* for Chrome,Safari, Opera */
 input::-webkit-input-placeholder{
 	font-size : 17px;
-	font-weight: bold;
 	font-family: 'Hanna', serif;
+    color: #CCCCCC;
 }
 
 /* for Edge */
 input:-ms-input-placeholder{
 	font-size : 17px;
-	font-weight: bold;
 	font-family: 'Hanna', serif;
+    color: #CCCCCC;
 }
 
 /* for IE */
 input:-ms-input-placeholder{
 	font-size : 17px;
-	font-weight: bold;
 	font-family: 'Hanna', serif;
+    color: #CCCCCC;
 }
