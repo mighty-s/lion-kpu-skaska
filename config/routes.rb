@@ -50,6 +50,8 @@ Rails.application.routes.draw do
     #NoticeComment routes
   post 'comments/' => 'comments#create'
 
+  delete 'comments/:id' => 'comments#destroy'
+
   # Recipe routes
   get 'recipe/index'
 

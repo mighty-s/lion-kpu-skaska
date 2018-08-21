@@ -13,5 +13,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    commenti = CommentNotice.find params[:id]
+    commenti.destroy
+
+    redirect_to "/notice/#{commenti.notice_id}"
   end
 end
