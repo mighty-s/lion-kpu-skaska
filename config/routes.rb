@@ -28,11 +28,16 @@ Rails.application.routes.draw do
 
   get 'notice/' => 'notify#index'
 
+  get 'notice/:id' => 'notify#show'
+
+    #notify-create
+
+  post 'notice/' => 'notify#new'
+
   get 'notify/show'
 
   get 'notify/create'
 
-  post 'notify/index'
 
   get 'recipe/new'
 
