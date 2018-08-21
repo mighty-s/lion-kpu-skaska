@@ -1,16 +1,17 @@
 <%=render 'commons/header' %>
-<form action="update" method="post">
+<form action="/user/update" method="post">
   <!-- 이전 페이지에서 넘어온 값 -->
-  <input type="hidden" name = "email" value="">
-  <input type="hidden" name = "pw"    value="">
-
+  <input type="hidden" name = "id" value="<%=@user.id%>">
+  <input type="hidden" name = "email" value="<%=@user.email %>">
+  <input type="hidden" name = "pw"    value="<%=@user.password_digest %>">
+  <input type= "hidden" value="<%=form_authenticity_token%>" name="authenticity_token">
   <div class="my_page">
     <span class="title">프로필</span>
     <div class="img"></div>
 
-    <input name ="nickname" class="nickname" type="text" placeholder="사용하실 닉네임">
-    <input name ="name"     class="name"     type="text" placeholder="이름">
-    <input name ="phone"    class="phone"    type="text" placeholder="휴대폰 번호">
+    <input name ="nickname" class="nickname" type="text" placeholder="사용하실 닉네임" value="<%=@user.nickname %>">
+    <input name ="name"     class="name"     type="text" placeholder="이름" value="<%=@user.name %>">
+    <input name ="phone"    class="phone"    type="text" placeholder="휴대폰 번호" value="<%=@user.phone%>">
 
     <div class="gender">
       <span>성별</span>
