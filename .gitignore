@@ -33,3 +33,6 @@
 
 # public 폴더에 올라간 업로드된 이미지 무시
 publc/uploads/recipe_image/image/*
+
+# secrets.yml 설정파일 무시
+/config/secrets.yml
