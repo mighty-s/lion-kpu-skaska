@@ -12,6 +12,7 @@
 
   .bottom-menu
   {
+    position:relative;
     margin-left:20px;
   }
 } //main-header 끝
@@ -43,10 +44,11 @@
 
 .bottom-menu
 {
-  .write
+  .writes
   {
-    display:inline-block;
-    float:left;
+    position: absolute;
+    top: 15px;
+    left: 30px;
     font-weight:bold;
     font-size:28px;
     width:171px;
@@ -55,37 +57,31 @@
     background-color:#eafff3;
     text-align:center;
     border : 1px solid #2E2F30;
-    margin-top:47px;
-    margin-bottom: 26.3px;
   }
 
-  .logo_image
+  .logo
   {
-    display:inline-block;
-    float:left;
-    margin-left:381.3px;
-    width:179px;
-    height:71px;
-    margin-top:29.2px;
-    margin-bottom:0;
+    position: relative;
+    width:167px;
+    margin: 0 auto;
+
   }
 
   .search-text
   {
-    display:inline-block;
-    float:right;
+    position: absolute;
+    top: 25px;
+    right: 83.5px;
     border-radius:40px;
     width:201px;
     height:28px;
-    margin-top:59.8px;
-    margin-right:8.3px;
-    margin-bottom:26.3px;
   }
 
   .search-button
   {
-    display:inline-block;
-    float:right;
+    position: absolute;
+    top: 25px;
+    right: 35.2px;
     color: #707070;
     width:40px;
     height:28px;
@@ -93,23 +89,16 @@
     font-size:7px;
     background-color:white;
     cursor:pointer;
-    margin-top:59.8px;
-    margin-right:35.2px;
-    margin-bottom:26.3px;
   }
 
+}// bottom-menu 끝
 
-  &::after
+
+.logo
+{
+  .logo_image
   {
-    content:"";
-    display:block;
-    clear:both;
+    width:179px;
+    height:71px;
   }
-
-}//bottom-menu 끝
-
-
-
-
-
-
+}// logo 끝
