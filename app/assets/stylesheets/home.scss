@@ -2,247 +2,464 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.main-picture-boxes
+.main {
+  width: 100%;
+  height: 484px;
+  overflow-y: scroll;
+
+  .main-picture-boxes {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2E2F30;
+    position:relative;
+
+  }
+
+  .bottom-box {
+    width: 100%;
+    margin-top:30px;
+  }
+} //main 끝
+
+
+
+.main-picture-boxes {
+    .left-arrow {
+      position: absolute;
+      top: 200px;
+      left: 30px;
+      width: 68px;
+      height: 68px;
+    }
+
+  .pictures {
+
+    position: relative;
+    width: 82%;
+    margin-left:10%;
+  }
+
+    .right-arrow {
+      position: absolute;
+      top: 200px;
+      right: 30px;
+      width: 68px;
+      height: 68px;
+    }
+
+
+}//main-picture-boxes
+
+.pictures {
+  .picture-on {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}//pictures 끝
+
+.picture-on
 {
-  margin: 20px auto;
-  width:80%;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #2E2F30;
-  text-align:center;
-  .picture-on
+
+  .picture-main
   {
-    display:inline-block;
-    margin: 0px 10px;
-
-    .picture-main
-    {
-      height:180px;
-      width:180px;
-      border: 1px solid #2E2F30;
-      margin: 2%;
-    }
-
-    .picture-main > a > .main-pics-image
-    {
-      width : 100%;
-      height : 100%;
-    }
-
-    p
-    {
-      margin: 10px 5px;
-      text-align: left;
-      font-weight: bold;
-      color: #999999;
-    }
-    .recipe{
-      font-size: 16px;
-    }
-    .nickname{
-      font-size: 12px;
-    }
-
+    height: 180px;
+    width: 180px;
+    border: 1px solid #2E2F30;
+    margin-top:20px;
+    margin-bottom:10px;
+  }
+  
+  .picture-main > a > .main-pics-image
+  {
+    width : 100%;
+    height : 100%;
   }
 
-
-  &::after
+  p
   {
-    content:'';
-    display:block;
-    clear:both;
+    margin-top: 5px;
+    text-align: left;
+    font-weight: bold;
+    color: #999999;
   }
 
-}
+  .recipe
+  {
+    font-size: 16px;
+  }
 
+  .nickname
+  {
+    font-size: 12px;
+  }
+
+}//picture-on 끝
+
+
+///////////////// bottom 시작 /////////////////////
 .bottom-box
 {
-  width:92%;
-  margin:20px auto;
-  text-align: center;
 
-  .best-left
+  .bottom-left
   {
-    margin-left: 3%;
-    width:45%;
     float:left;
-    box-sizing: border-box;
-    border:1px solid #2E2F30;
-    .best-3
-    {
-      text-align:left;
-      border-bottom:1px solid #2E2F30;
-      width:100%;
-      height:40px;
-    }
-
-    &::after
-    {
-      content:'';
-      display:block;
-      clear:both;
-    }
-  }
-  .best-box
-  {
-    margin: 15% 20px ;
-    width:130px;
-    height:130px;
-    border:1px solid #2E2F30;
-    float:left;
+    width: 43%;
+    border: 1px solid #2E2F30;
+    margin-left:80px;
+    margin-bottom:20px;
   }
 
   .bottom-right
   {
-    margin-right: 3%;
     float:right;
-    width:45%;
-    box-sizing: border-box;
-    border: 1px solid black;
+    width: 43%;
+    margin-right:80px;
+    margin-bottom:20px;
   }
 
   &::after
   {
-    content:'';
-    display:block;
-    clear:both;
+    content: '';
+    display: block;
+    clear: both;
   }
 
-
-}//end .bottom-box
-
+}//bottom-box 끝
 
 
 
-.best-3
+.bottom-left
 {
+
+  .bottom-left-top
+  {
+    border-bottom: 1px solid #2E2F30;
+    width: 100%;
+    height: 40px;
+  }
+
+  .bottom-left-bottom
+  {
+    width: 100%;
+  }
+
+}//bottom-left 끝
+
+
+
+
+.bottom-left-top
+{
+  p
+  {
+    float:left;
+    font-size:20px;
+    color:red;
+    font-weight:bold;
+    margin:10px;
+  }
+
   .best-more
   {
-    float:right;
-    margin-right:10px;
+    float: right;
+    margin: 13px;
+  }
+
+  &::after
+  {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+} //bottom-left-top 끝
+
+.bottom-left-bottom {
+  width: 100%;
+  margin-bottom:15px;
+
+  .best1
+  {
+    display: inline-block;
+    margin: 15px;
+  }
+
+  .best2
+  {
+    display: inline-block;
+    margin: 15px;
+  }
+
+  .best3
+  {
+    display: inline-block;
+    margin: 15px;
+      }
+
+} //bottom-left-bottom 끝
+
+
+
+.best1
+{
+  .best1-box
+  {
+    width: 175px;
+    height: 175px;
     border: 1px solid #2E2F30;
   }
-}
+
+  p
+  {
+    font-size:15px;
+    margin-top:10px;
+    text-align:center;
+    font-weight:bold;
+    color: gold;
+  }
+
+} //best1 끝
+
+.best2
+{
+  .best2-box
+  {
+    display: inline-block;
+    width: 155px;
+    height: 155px;
+    border: 1px solid #2E2F30;
+  }
+
+  p
+  {
+    font-size:14px;
+    margin-top:10px;
+    text-align:center;
+    font-weight:bold;
+    color: #616161;
+  }
+} //best2 끝
+
+.best3
+{
+  .best3-box
+  {
+    display: inline-block;
+    width: 135px;
+    height: 135px;
+    border: 1px solid #2E2F30;
+  }
+
+  p
+  {
+    font-size:13px;
+    margin-top:10px;
+    text-align:center;
+    font-weight:bold;
+    color: brown;
+  }
+} //best3 끝
+
+
 
 .bottom-right
 {
+
+  .bottom-right-notify
+  {
+
+    margin-bottom:10px;
+    border: 1px solid black;
+    border-bottom: 0;
+  }
+
+  .bottom-add
+  {
+    border: 1px solid black;
+    height:155px;
+  }
+
+}//bottom-right 끝
+
+
+.bottom-right-notify
+{
   .notify
   {
-    width:100%;
-    height:40px;
-    border-bottom:1px solid #2E2F30;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #2E2F30;
+  }
+
+}//bottom-right-notify 끝
+
+
+.notify
+{
+  p
+  {
+    float:left;
+    font-size:20px;
+    color:red;
+    font-weight:bold;
+    margin:10px;
   }
 
   .notify-more
   {
-    float:right;
-    margin-right:10px;
-    border: 1px solid #2E2F30;
+    float: right;
+    margin: 13px;
   }
 
-  .bottom-right-notify
+  &::after
   {
-    height:50%;
+    content: '';
+    display: block;
+    clear: both;
   }
+} //notify 끝
 
-  .bottom-notify
+
+.bottom-notify
+{
+  .bottom-notify-title
   {
-    .bottom-notify-title
-    {
-
-      padding:20px 0;
-      //글씨 가운데 정렬 어케하지?
-      height:33%;
-      border-bottom:1px solid #2E2F30;
-    }
-
-    border-bottom:1px solid #2E2F30;
+    padding: 8.3px;
+    height: 50%;
+    border-bottom: 1px solid #2E2F30;
   }
 
+} //bottom-notify 끝
 
-  .bottom-add
+
+.bottom-notify-title
+{
+  a
   {
-    height:50%;
-    .shinee
-    {
-      width:100%;
-      height:100%;
-    }
+    font-weight: bold;
+    font-size: 18px;
+    color: #6e6e6e;
   }
-}
+
+} //bottom-notify-title 끝
 
 
-#wrap{
+
+  ////////////////
+ /// search ////
+//////////////
+#wrap
+{
   text-align: center;
   width: 95%;
   margin: 20px auto;
   background-color: #fafafa;
   padding-top: 40px;
-  #searchTop{
+
+  #searchTop
+  {
     width: 100%;
     margin-bottom: 20px;
-    .picCircle{
-      border: 1.5px solid #07ea67;
-      border-radius: 50%;
-      margin-right: 30px;
-      width: 120px;
-      height: 120px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .searchTitle{
-      width: auto;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 40%;
-      text-align: left;
-      h1{
-        font-size: 23px;
-        color : #07ea67;
-      }
-      h2{
-        margin-top: 10px;
-        font-size: 15px;
-      }
-    }
   }
 
-  #search-main{
+  #search-main
+  {
     height: auto;
     width: 60%;
     display: inline-block;
-    :hover{
-      background-color: #cbcbcb;
-      filter: alpha(opacity=60);
-      opacity: 0.6;
-    }
-    p{
-      margin-top : 50px;
-      margin-left: 45px;
-      margin-bottom: 10px;
-      text-align: left;
-      font-size: 14px;
-    }
-
-    .search-content{
-      margin:10px 25px;
-      width: 220px;
-      border:1px solid black;
-      height: 220px;
-      display: inline-block;
-      img{
-        width: 99%;
-        height: 99%;
-        position: relative;
-
-      }
-      p{
-        margin:0px;
-        top: -110px;
-        text-align: center;
-        position: relative;
-        display: none;
-      }
-    }
-
   }
-}
+
+} //#wrap끝
+
+
+#searchTop{
+
+  .picCircle{
+    border: 1.5px solid #07ea67;
+    border-radius: 50%;
+    margin-right: 30px;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+  .searchTitle{
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 40%;
+    text-align: left;
+  }
+
+} //SearchTop 끝
+
+
+.searchTitle{
+
+  h1{
+    font-size: 23px;
+    color : #07ea67;
+  }
+
+  h2{
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+} //searchTitle 끝
+
+
+#search-main
+{
+  height: auto;
+  width: 60%;
+  display: inline-block;
+
+  :hover
+  {
+    background-color: #cbcbcb;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+  }
+
+  p
+  {
+    margin-top: 50px;
+    margin-left: 45px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .search-content
+  {
+    margin: 10px 25px;
+    width: 220px;
+    border: 1px solid black;
+    height: 220px;
+    display: inline-block;
+  }
+
+} //search-main 끝
+
+
+.search-content
+{
+  img
+  {
+    width: 99%;
+    height: 99%;
+    position: relative;
+  }
+
+  p
+  {
+    margin: 0;
+    top: -110px;
+    text-align: center;
+    position: relative;
+    display: none;
+  }
+} //search-content 끝

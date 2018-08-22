@@ -2,8 +2,13 @@
   <%=render 'commons/header' %>
 </div>
 
-<div class="main-picture-boxes">
-  <% @r_list.each do |recipe| %>
+<div class="main">
+  <div class="main-picture-boxes">
+
+   <a href="#"><%=image_tag 'left-arrow.jpg' ,class:"left-arrow"%></a>
+
+
+    <% @r_list.each do |recipe| %>
     <div class="picture-on">
       <div class="picture-main">
         <a href="/recipe/index">
@@ -13,45 +18,71 @@
       <div class="picture-name">
         <p class="recipe"><%=recipe.title%></p>
         <p class="nickname"><%=recipe.nickname%></p>
+      </div> <!-- picture-on 끝 -->
+    <% end %>
+    </div> <!-- pictures 끝 -->
+
+    <a href="#"><%=image_tag 'right-arrow.jpg' ,class:"right-arrow"%></a>
+  </div> <!-- main-picture-boxes 끝 -->
+
+
+  <div class="bottom-box">
+
+    <div class="bottom-left">
+
+      <div class="bottom-left-top">
+          <p>BEST3</p>
+          <a href="" class="best-more">more</a>
+      </div><!-- bottom-left-top 끝 -->
+
+      <div class="bottom-left-bottom">
+
+        <div class="best1">
+          <div class="best1-box"></div>
+          <p>1위</p>
+          <p>진리의 팝콘</p>
+        </div>
+
+        <div class="best2">
+          <div class="best2-box"></div>
+          <p>2위</p>
+          <p>진리의 팝콘</p>
+        </div>
+
+        <div class="best3">
+          <div class="best3-box"></div>
+          <p>3위</p>
+          <p>진리의 팝콘</p>
+        </div>
+
+      </div> <!-- bottom-left-bottom 끝 -->
+
+    </div> <!-- bottom-left 끝 -->
+
+    <div class="bottom-right">
+
+      <div class="bottom-right-notify">
+
+      <div class="notify">
+        <p>공지 사항</p>
+        <a class="notify-more" href="/notice">more</a>
       </div>
-    </div>
-  <% end %>
-</div>
-
-<div class="bottom-box">
-  <div class="best-left">
-    <div class="best-3">
-      <p>BEST-3</p>
-      <a href="" class="#">more..</a>
-    </div>
-    <div class="best-box">
-      1위~
-    </div>
-    <div class="best-box">
-      2위~
-    </div>
-    <div class="best-box">
-      3위~
-    </div>
-  </div>
-
-  <div class="bottom-right">
-    <div class="notify">
-      <p>공지 사항</p>
-      <a class="notify-more" href="/notice">more....</a>
-    </div>
-
-    <div class="bottom-right-notify">
       <div class="bottom-notify">
-        <!-- TODO 이부분 수정 필요 -->
-          <p class="bottom-notify-title"><a href="/notice/"></a></p>
+          <p class="bottom-notify-title"><a href="/notice/">문어복어</a></p>
+          <p class="bottom-notify-title"><a href="/notice/">복어문어</a></p>
+          <p class="bottom-notify-title"><a href="/notice/">스까의 희망 : 갓은주</a></p>
       </div>
-    </div>
 
-    <div class="bottom-add">
-      <iframe class="shinee" src="https://www.youtube.com/embed/7dGwk5-QMpc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-  </div>
+    </div> <!-- bottom-right-notify 끝 -->
 
-</div>
 
+      <div class="bottom-add">
+        <span>광고 배너 자리입니당</span>
+        <iframe class="video" src="https://www.youtube.com/embed/xRbPAVnqtcs?amp;vq=hd3000&showinfo=0&autoplay=1&loop=1;playlist=xRbPAVnqtcs"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+
+    </div> <!-- bottom-right 끝 -->
+
+  </div> <!-- bottom-box 끝 -->
+
+</div> <!-- main 끝 -->
