@@ -36,3 +36,6 @@ publc/uploads/recipe_image/image/*
 
 # secrets.yml 설정파일 무시
 /config/secrets.yml
+
+# s3에서 오는 임시파일 제거
+/public/uploads/*

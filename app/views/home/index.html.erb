@@ -3,14 +3,16 @@
 </div>
 
 <div class="main-picture-boxes">
-  <% for i in 1..10%>
+  <% @r_list.each do |recipe| %>
     <div class="picture-on">
       <div class="picture-main">
-        <a href="/recipe/index">클릭해봐용!!!!</a>
+        <a href="/recipe/index">
+          <%=image_tag RecipeImage.find(recipe.id).image.url ,class: 'main-pics-image'%>
+        </a>
       </div>
       <div class="picture-name">
-        <p class="recipe">마크정식</p>
-        <p class="nickname">장준범</p>
+        <p class="recipe"><%=recipe.title%></p>
+        <p class="nickname"><%=recipe.nickname%></p>
       </div>
     </div>
   <% end %>

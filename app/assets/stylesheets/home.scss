@@ -9,16 +9,27 @@
   padding-bottom: 20px;
   border-bottom: 1px solid #2E2F30;
   text-align:center;
-  .picture-on{
+  .picture-on
+  {
     display:inline-block;
     margin: 0px 10px;
-    .picture-main{
+
+    .picture-main
+    {
       height:180px;
       width:180px;
       border: 1px solid #2E2F30;
       margin: 2%;
     }
-    p{
+
+    .picture-main > a > .main-pics-image
+    {
+      width : 100%;
+      height : 100%;
+    }
+
+    p
+    {
       margin: 10px 5px;
       text-align: left;
       font-weight: bold;
