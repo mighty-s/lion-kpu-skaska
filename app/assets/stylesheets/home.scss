@@ -24,7 +24,6 @@
 
 
 .main-picture-boxes {
-
     .left-arrow {
       position: absolute;
       top: 200px;
@@ -69,6 +68,12 @@
     margin-top:20px;
     margin-bottom:10px;
   }
+  
+  .picture-main > a > .main-pics-image
+  {
+    width : 100%;
+    height : 100%;
+  }
 
   p
   {
@@ -92,8 +97,6 @@
 
 
 ///////////////// bottom 시작 /////////////////////
-
-
 .bottom-box
 {
 

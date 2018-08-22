@@ -8,6 +8,6 @@ class Recipe < ApplicationRecord
   #
   #
   def self.image_create(model, params)
-    RecipeImage.creates(params, model.id) unless model.nil?
+    RecipeImage.creates(params, model) unless model.nil?
   end
 end

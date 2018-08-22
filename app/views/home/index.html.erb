@@ -8,19 +8,16 @@
    <a href="#"><%=image_tag 'left-arrow.jpg' ,class:"left-arrow"%></a>
 
 
-    <div class="pictures">
-    <% for i in 1..10%>
-      <div class="picture-on">
-
-        <div class="picture-main">
-          <a href="/recipe/index">클릭해봐용!!!!</a>
-        </div>
-
-        <div class="picture-name">
-          <p class="recipe">마크정식</p>
-          <p class="nickname">장준범</p>
-        </div>
-
+    <% @r_list.each do |recipe| %>
+    <div class="picture-on">
+      <div class="picture-main">
+        <a href="/recipe/index">
+          <%=image_tag RecipeImage.find(recipe.id).image.url ,class: 'main-pics-image'%>
+        </a>
+      </div>
+      <div class="picture-name">
+        <p class="recipe"><%=recipe.title%></p>
+        <p class="nickname"><%=recipe.nickname%></p>
       </div> <!-- picture-on 끝 -->
     <% end %>
     </div> <!-- pictures 끝 -->
