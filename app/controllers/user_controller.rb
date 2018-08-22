@@ -9,6 +9,16 @@ class UserController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.name= params[:name]
+    @user.phone= params[:phone]
+    @user.gender= params[:gender]
+    @user.save
+    redirect_to '/'
   end
 
   def mypage
@@ -41,5 +51,8 @@ class UserController < ApplicationController
 
   def join_complete
     @nickname = params[:nickname]
+    if @nickname == nil
+      redirect_back fallback_location: '/'
+    end
   end
 end

@@ -1,0 +1,26 @@
+<div>
+  <%=render 'commons/header' %>
+</div>
+
+<form action="<%=recipes_path%>" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+  <div class="write">
+    <input name="title" class="receipt_name" type="text" placeholder="레시피 이름">
+    <div class="picture">
+      <div class="picture-wrap">
+        <% for i in 0 .. 9 %>
+          <input class="receipt_picture" type="file" name="img[<%=i%>]">
+        <% end %>
+      </div>
+    </div>
+
+    <textarea
+      name = "content"
+      class="receipt_content"
+      placeholder="&#13;&#10;&#13;&#10;1.&#13;&#10;&#13;&#10;2.&#13;&#10;&#13;&#10;3.&#13;&#10;&#13;&#10;4.&#13;&#10;&#13;&#10;">
+    </textarea>
+
+    <input name = "hash_tag" class="receipt_tag" type="text" placeholder="태그 #입력 (최대 10개)">
+    <input type= "hidden" value="<%=form_authenticity_token%>" name="authenticity_token">
+    <input class="receipt_regist" type="submit" value="스까등록">
+  </div>
+</form>
