@@ -13,4 +13,5 @@ module RecipesHelper
   def parse_in_hash(hash)
     hash.to_s.gsub(/\s+/, '')
   end
+
 end
