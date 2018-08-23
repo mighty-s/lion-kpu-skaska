@@ -4,7 +4,9 @@ class RecipesController < ApplicationController
   def index
   end
 
-  def show; end
+  def show
+    recipe = Recipe.find params[:id]
+  end
 
   def new; end # 레시피 작성 페이지
 
@@ -20,7 +22,7 @@ class RecipesController < ApplicationController
       Recipe.image_create(recipe, params) unless recipe.nil?
     end
 
-    redirect_to '/'
+    redirect_to "/recipes/#{recipe.id}"
   end
 
   def edit; end
