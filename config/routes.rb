@@ -51,10 +51,10 @@ Rails.application.routes.draw do
   delete 'comments/:id' => 'comments#destroy'
 
   # Recipe routes
-  # resources :recipes
-  get 'recipes/new' => 'recipes#new'
+   resources :recipes
+ # get 'recipes/new' => 'recipes#new'
 
-  get 'recipes/index' => 'recipes#index'
+ # get 'recipes/index' => 'recipes#index'
 
   # Home routes
   get 'home/search' => 'home#search'
