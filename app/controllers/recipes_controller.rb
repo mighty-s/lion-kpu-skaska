@@ -5,7 +5,9 @@ class RecipesController < ApplicationController
   end
 
   def show
-    recipe = Recipe.find params[:id]
+    @reci = Recipe.find params[:id]
+    @recipic = @reci.recipe_images
+    @reci_user = @reci.user.nickname
   end
 
   def new; end # 레시피 작성 페이지

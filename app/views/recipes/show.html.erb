@@ -4,10 +4,14 @@
 
     <section class="left-top">
       <a href="/"><div class="go-main">메인!</div></a>
-      <div class="left-top-title">염소치즈에 딸기 먹어봤나?</div>
+      <div class="left-top-title"><%=@reci.title%></div>
       <!-- 본문 제목 -->
 
       <div class="left-top-content">
+            <div class="pictures">
+            <div class="content-comment">
+              <p><%=@reci.content%></p>
+            </div>
         <div class="pictures">
           <div class="picture">사진1</div>
           <div class="picture">사진2</div>
@@ -61,7 +65,7 @@
 
     <section class="right_title">
       <div class="right_title_left">
-        <div class="nickname">멋쟁이사자두목</div>
+        <div class="nickname"><%=@reci_user%></div>
         <a href="#"><%=image_tag 'watch.png' ,class:"watch"%></a>
       </div>
       <div class="profile_image"></div>
@@ -69,7 +73,7 @@
 
 
     <div class="right-comment">
-      <div class="comment-hash"><p>#치킨 #피자 #야식 #편의점 #멋쟁이 #존맛탱 #사자처럼 #기모찌</p></div>
+      <div class="comment-hash"><p><%=@reci.hash_tag%></p></div>
       <!-- 해쉬 태그 -->
 
       <div class="see-like-number">
@@ -80,7 +84,7 @@
       <!-- view, 좋아요 수, 댓글 수  -->
 
       <span class="date"> 게시:
-        <div class="when">2018년 8월 14일</div>
+        <div class="when"><%= @reci.created_at.to_datetime.strftime("%Y년 %m월 %d일")%></div>
       </span>
 
     </div> <!-- right-comment 끝-->
