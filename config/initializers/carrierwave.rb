@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
   #     -> 반드시 .gitignore에 secrets.yml 무시 설정이 되어있는지 확인
   #     -> 후에 git rm -r --cached .    실행 후, 다시 git add 할것
   #     -> 반드시 위 사항을 적용해야하며, 깃허브에 키 올라가면 잡으러감
-  # 
+  #
   secrets = Rails.application.secrets
   config.fog_provider    = 'fog/aws' # required
   config.fog_credentials = {
