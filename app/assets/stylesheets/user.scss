@@ -985,12 +985,13 @@ article
 .update_button{
   text-align: center;
   .complete_button{
+    padding:2px;
+    border : 1px solid #2E2F30;
     display: inline-block;
     background-color: black;
     width: 250px;
     height: 60px;
     color: white;
-    border: none;
   }
 }
 

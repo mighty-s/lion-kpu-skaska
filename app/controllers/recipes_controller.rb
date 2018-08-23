@@ -1,7 +1,8 @@
 class RecipesController < ApplicationController
   include RecipesHelper
 
-  def index; end
+  def index
+  end
 
   def show; end
 
