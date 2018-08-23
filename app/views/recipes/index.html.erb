@@ -43,13 +43,24 @@
       <form>
         <section class="comments">
           <div class="comments-title">댓글 (22)</div>
-          <input class="comments-write" type="text">
-          <input class="submit" type="submit" value="작성쓰까">
-          <div class="comments-comment">댓글내용</div>
-          <div class="comments-comment">댓글내용</div>
-          <div class="comments-comment">댓글내용</div>
-          <div class="comments-comment">댓글내용</div>
-          <div class="comments-comment">댓글내용</div>
+          <div class="profile_image"></div>
+          <textarea name=content class="comments-write" type="text"></textarea>
+          <input class="submit" type="submit" value="댓글 게시">
+
+          <div class="comment-collect">
+
+          <% for i in 0 .. 9 %>
+          <div class="profile_image"></div>
+
+            <div class="nick-comment">
+            <div class="nickname">문어복어</div>
+          <div class="comments-comment">와우!! 정말 맛있어 보여요!!</div>
+            </div>
+
+          <% end %>
+
+          </div>
+
         </section><!-- comments 댓글모은 것들 끝 -->
       </form>
     </section> <!-- left bottom 끝 -->
