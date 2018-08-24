@@ -8,7 +8,7 @@
     <a href="#"><%=image_tag 'left-arrow.jpg' ,class:"left-arrow"%></a>
 
     <div class="pictures">
-      <% @r_list.each do |recipe| %>
+      <% @star.each do |recipe| %>
         <div class="picture-on">
           <div class="picture-main">
             <a href="/recipes/<%=recipe.id%>">
@@ -17,7 +17,6 @@
           </div>
           <div class="picture-name">
             <p class="recipe"><%=recipe.title%></p>
-            <p class="nickname"><%=recipe.nickname%></p>
           </div>
 
         </div> <!-- picture-on 끝 -->
