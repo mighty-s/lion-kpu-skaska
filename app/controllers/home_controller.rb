@@ -10,6 +10,7 @@ class HomeController < ApplicationController
 
   def search
     @searchi = params[:search_keyword]
-    @result = Recipe.where("hash_tag like ?","%#{@searchi}%")
+    @resultByView = Recipe.where("hash_tag like ?","%#{@searchi}%").order(view: :desc)
+    @resultByTime = Recipe.where("hash_tag like ?","%#{@searchi}%").order(:updated_at)
   end
 end
