@@ -11,7 +11,7 @@
       <% @r_list.each do |recipe| %>
         <div class="picture-on">
           <div class="picture-main">
-            <a href="/recipe/index">
+            <a href="/recipes/<%=recipe.id%>">
               <%=image_tag RecipeImage.find(recipe.id).image.url ,class: 'main-pics-image'%>
             </a>
           </div>

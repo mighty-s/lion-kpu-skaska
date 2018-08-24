@@ -56,6 +56,7 @@ Rails.application.routes.draw do
 
  # get 'recipes/index' => 'recipes#index'
 
+
   # Home routes
   get 'home/search' => 'home#search'
 
