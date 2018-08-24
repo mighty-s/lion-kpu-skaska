@@ -14,15 +14,15 @@
     <span class="title">프로필</span>
     <div class="img"></div>
     
-    <input name ="nickname" class="nickname" type="text" placeholder="사용하실 닉네임">
-    <input name ="name"     class="name"     type="text" placeholder="이름">
-    <input name ="phone"    class="phone"    type="text" placeholder="휴대폰 번호">
+    <input name ="nickname" class="nickname" type="text" placeholder="사용하실 닉네임" required>
+    <input name ="name"     class="name"     type="text" placeholder="이름" required>
+    <input name ="phone"    class="phone"    type="text" placeholder="휴대폰 번호" required>
     
     <div class="gender">
       <span>성별</span>
       <div class="gender-button">
-        <input id="man" name = "gender" type="radio" value="man"> <label for="man"><p>남자</p></label>
-        <input id="woman" name = "gender" type="radio" value="woman"> <label for="woman"><p>여자</p></label>
+        <input id="man" name = "gender" type="radio" value="man" required> <label for="man">남자</label>
+        <input id="woman" name = "gender" type="radio" value="woman" required> <label for="woman">여자</label>
       </div>
     </div>
 
@@ -105,8 +105,8 @@
       </textarea>
 
 
-      <input type="checkbox" class="checkbox">
-      <span class="check" required>개인정보 수집 및 이용에 동의합니다.</span>
+      <input type="checkbox" class="checkbox" required>
+      <span class="check">개인정보 수집 및 이용에 동의합니다.</span>
 
       <input class="end" type="submit" value="가입완료">
     </div>
