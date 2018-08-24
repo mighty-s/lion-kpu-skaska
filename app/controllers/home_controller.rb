@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     #
     @notify = Notice.all
     @star = Recipe.all
+    @top3 = Recipe.all.order(view: :desc).limit(3)
   end
 
   def search

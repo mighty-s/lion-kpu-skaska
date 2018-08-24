@@ -1,4 +1,4 @@
-class CommentRecipesController < ApplicationController
+class RecipeCommentsController < ApplicationController
   def create
     if user_loged_in?
       commenti = CommentRecipe.create(
@@ -10,6 +10,7 @@ class CommentRecipesController < ApplicationController
     else
       redirect_to "/recipes"
     end
+    puts params
   end
 
   def destroy

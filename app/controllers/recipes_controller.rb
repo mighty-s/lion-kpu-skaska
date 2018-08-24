@@ -15,6 +15,8 @@ class RecipesController < ApplicationController
     @reci_split = @reci_p.split("\r\n")
     view_increase(@reci)
 
+    #####
+    # 코멘트 관련
     @token = form_authenticity_token
     end
 

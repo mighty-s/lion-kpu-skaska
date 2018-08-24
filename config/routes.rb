@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'recipe_comments/create'
+
+  get 'recipe_comments/destroy'
+
   get 'comment_recipes/create'
 
   get 'comment_recipes/destroy'
@@ -49,9 +53,9 @@ Rails.application.routes.draw do
   # Comment routes
 
     #RecipeComment routes
-  post 'comment_recipes/' => 'comment_recipes#create'
     #NoticeComment routes
   post 'comments/' => 'comments#create'
+  post 'comment_recipes' => 'recipe_comments#create'
 
   delete 'comments/:id' => 'comments#destroy'
 

@@ -3,6 +3,7 @@ class Recipe < ApplicationRecord
   belongs_to :user
   has_many :recipe_images
   has_many :likes
+  has_many :comment_recipes
 
 
   # create 메서드가 너무 길어져서 이걸로 뺏음

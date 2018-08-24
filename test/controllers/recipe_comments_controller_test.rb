@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class CommentRecipesControllerTest < ActionDispatch::IntegrationTest
+class RecipeCommentsControllerTest < ActionDispatch::IntegrationTest
   test "should get create" do
-    get comment_recipes_create_url
+    get recipe_comments_create_url
     assert_response :success
   end
 
   test "should get destroy" do
-    get comment_recipes_destroy_url
+    get recipe_comments_destroy_url
     assert_response :success
   end
 
