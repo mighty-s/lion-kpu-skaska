@@ -9,6 +9,9 @@
 
     <div class="pictures">
       <% @star.each do |recipe| %>
+        <% if recipe.id > 11 %>
+          <% break %>
+          <%else %>
         <div class="picture-on">
           <div class="picture-main">
             <a href="/recipes/<%=recipe.id%>">
@@ -20,7 +23,7 @@
           </div>
 
         </div> <!-- picture-on 끝 -->
-
+      <% end %>
       <% end %>
 
     </div><!-- pictures 끝 -->

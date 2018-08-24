@@ -48,10 +48,11 @@
           <div class="comment-collect">
             <% @comments.each do |comment| %>
               <div class="profile_image"></div>
-              <a href='/comments/<%=comment.id%>' data-confirm='진짜 삭제하시게쓰까?' data-method='DELETE'>X</a>
               <div class="nick-comment">
-                <div class="nickname"><%= %></div>
+                <a href='/comments/<%=comment.id%>' data-confirm='진짜 삭제하시게쓰까?' data-method='DELETE'>X</a>
+                <div class="nickname"><%=@comments_nickname%></div>
                 <div class="comments-comment"><%=comment.content %></div>
+
               </div>
             <% end %>
           </div>

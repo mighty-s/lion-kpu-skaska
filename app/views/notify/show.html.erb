@@ -31,7 +31,7 @@
 
       <% @comments.each do |comment| %>
         <a href='/comments/<%=comment.id%>' data-confirm='진짜 삭제하시게쓰까?' data-method='DELETE'>X</a>
-        <p class="comment_nickname"><%= @session_nickname %> </p>
+        <p class="comment_nickname"><%= @comments_nickname %> </p>
         <p class="comment_upload_time"><%= comment.created_at.to_datetime.strftime("%Y.%m.%d.%H:%M")%></p>
         <p class="comment_content"><%= comment.content %> </p>
         <% end %>
