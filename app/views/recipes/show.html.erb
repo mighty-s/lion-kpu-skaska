@@ -6,44 +6,39 @@
       <div class="left-top-title"><%=@reci.title%></div>
       <!-- 본문 제목 -->
 
-      <div class="left-top-content">
-        <% if @recipic_count > @reci_count %>
-        <% @recipic.each do |pictures| %>
-          <div class="pictures">
-          <div class="picture">
-        <%=image_tag pictures.find(@reci.id).image.url ,class: 'picture'%></div>
-          </div>
-            <div class="content-comment">
-              <p><%=@reci.content%></p>
-            </div>
-        <% end %>
-        <% end %>
 
-        <div class="pictures">
+
+        <div class="left-top-content">
+          <div class="pictures">
+            <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
+            <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
+          </div> <!-- 첫 번째 사진 2개 -->
+
+          <div class="content-comment">
+            <p><%=@reci.content%></p>
+          </div> <!-- 첫 번째 본문 내용 -->
+
+
+      <div class="pictures">
           <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
           <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
-        </div><!-- 첫 번째 사진 3개 -->
+      </div> <!-- 두 번째 사진 3개 -->
 
         <div class="content-comment">
           <p><%=@reci.content%></p>
-        </div> <!-- 첫 번째 본문 내용 -->
+        </div> <!-- 두 번째 본문 내용 -->
+
 
         <div class="pictures">
-          <div class="picture">사진1</div>
-          <div class="picture">사진2</div>
-        </div> <!-- 두 번째 사진 3개 -->
+          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
+          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
+        </div> <!-- 세 번째 사진 3개 -->
 
-        <div class="content-comment">본문내용</div>
-        <!-- 두 번째 본문 내용 -->
+        <div class="content-comment">
+          <p><%=@reci.content%></p>
+        </div> <!-- 세 번째 본문 내용 -->
 
-        <div class="pictures">
-          <div class="picture">사진1</div>
-          <div class="picture">사진2</div>
-        </div><!-- 세 번째 사진 3개 -->
-        <div class="content-comment">본문내용</div>
-        <!-- 세 번째 본문 내용 -->
-
-      </div><!-- left-top-content 본문 끝 -->
+      </div> <!-- left-top-content 본문 끝 -->
 
       <a href="/"><div class="go-main">메인!</div></a>
 
@@ -101,7 +96,7 @@
       <!-- view, 좋아요 수, 댓글 수  -->
 
       <span class="date"> 게시:
-        <div class="when">년월일</div>
+        <div class="when"><%= @reci.created_at.to_datetime.strftime("%Y년 %m월 %d일")%></div>
       </span>
 
     </div> <!-- right-comment 끝-->
@@ -124,4 +119,4 @@
   </section><!--right 끝-->
 
 
-</section>
+</section><!--show 끝-->

@@ -10,9 +10,8 @@ class RecipesController < ApplicationController
     @recipic = @reci.recipe_images
     @reci_p = @reci.content
     @recipic_count = @reci.recipe_images.count
-    @reci_count = @reci_p.split("\r\n").count
-
-  end
+    @reci_split = @reci_p.split("\r\n")
+    end
 
   def new; end # 레시피 작성 페이지
 

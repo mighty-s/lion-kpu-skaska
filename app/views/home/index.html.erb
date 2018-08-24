@@ -8,7 +8,7 @@
     <a href="#"><%=image_tag 'left-arrow.jpg' ,class:"left-arrow"%></a>
 
     <div class="pictures">
-      <% @r_list.each do |recipe| %>
+      <% @star.each do |recipe| %>
         <div class="picture-on">
           <div class="picture-main">
             <a href="/recipes/<%=recipe.id%>">
@@ -17,7 +17,6 @@
           </div>
           <div class="picture-name">
             <p class="recipe"><%=recipe.title%></p>
-            <p class="nickname"><%=recipe.nickname%></p>
           </div>
 
         </div> <!-- picture-on 끝 -->
@@ -71,13 +70,16 @@
         <a class="notify-more" href="/notice">more</a>
       </div>
       <div class="bottom-notify">
-          <p class="bottom-notify-title"><a href="/notice/">문어복어</a></p>
-          <p class="bottom-notify-title"><a href="/notice/">복어문어</a></p>
-          <p class="bottom-notify-title"><a href="/notice/">스까의 희망 : 갓은주</a></p>
-      </div>
+          <% @notify.each do |notice|%>
+          <% if notice.id > 3 %>
+            <% break %>
+          <% else %>
+            <p class="bottom-notify-title"><a href="/notice/<%=notice.id%>"><%=notice.title%></a></p>
+          <% end %>
+          <% end %>
+        </div>
 
     </div> <!-- bottom-right-notify 끝 -->
-
 
       <div class="bottom-add">
         <span>광고 배너 자리입니당</span>
