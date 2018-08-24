@@ -17,6 +17,9 @@ class RecipesController < ApplicationController
 
     #####
     # 코멘트 관련
+    @comments = @reci.comment_recipes
+    @comments_count = @comments.count
+    
     @token = form_authenticity_token
     end
 

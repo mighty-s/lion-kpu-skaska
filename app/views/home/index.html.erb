@@ -42,7 +42,11 @@
         <% @top3.each do |top| %>
 
           <div class="best<%=cnt%>">
-            <div class="best<%=cnt%>-box"></div>
+            <div class="best<%=cnt%>-box">
+              <a href="/recipes/<%= top.id %>">
+                <%= image_tag RecipeImage.find(top.recipe_images.first.id).image.url, class: 'best'+cnt.to_s+'-box' %>
+              </a>
+            </div>
             <p><%=cnt%>위</p>
             <p><%=top.title%></p>
           </div>
