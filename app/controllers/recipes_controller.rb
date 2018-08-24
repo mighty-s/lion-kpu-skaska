@@ -8,19 +8,19 @@ class RecipesController < ApplicationController
     @index = 0
     @reci = Recipe.find params[:id]
     @rec_image = RecipeImage.where(recipe_id: params[:id])
-    @reci_user = @reci.user.nickname
-    @recipic = @reci.recipe_images
     @reci_p = @reci.content
     @recipic_count = @reci.recipe_images.count
-    @reci_split = @reci_p.split("\r\n")
+    @reci_split = @reci.content.split("\r\n")
     view_increase(@reci)
 
     #####
     # 코멘트 관련
     @comments = @reci.comment_recipes
+   #  if !@comment.nil?
     @comments_count = @comments.count
-    
+    @comments_nickname = @comments.find(params[:id]).user.nickname
     @token = form_authenticity_token
+   #@ end
     end
 
   def new; end # 레시피 작성 페이지

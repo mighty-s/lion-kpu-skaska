@@ -25,6 +25,6 @@ class NotifyController < ApplicationController
     @noti = Notice.find params[:id]
     @count_comment = @noti.comment_notices.count
     @comments = @noti.comment_notices
-    @session_nickname = session[:user]['nickname']
+   # @comments_nickname = @comments.find(params[:id]).user.nickname
   end
 end
