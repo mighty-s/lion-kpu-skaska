@@ -1,4 +1,3 @@
-
 <section class="show">
   <section class="left">
 
@@ -8,18 +7,25 @@
       <!-- 본문 제목 -->
 
       <div class="left-top-content">
-            <div class="pictures">
+        <% if @recipic_count > @reci_count %>
+        <% @recipic.each do |pictures| %>
+          <div class="pictures">
+          <div class="picture">
+        <%=image_tag pictures.find(@reci.id).image.url ,class: 'picture'%></div>
+          </div>
             <div class="content-comment">
               <p><%=@reci.content%></p>
             </div>
+        <% end %>
+        <% end %>
+
         <div class="pictures">
-          <div class="picture">사진1</div>
-          <div class="picture">사진2</div>
+          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
+          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
         </div><!-- 첫 번째 사진 3개 -->
 
         <div class="content-comment">
-          <p>아직도 브루스게타(바게트 위에 야채와 소스를 얹은 전체요리)를 토마토로 만든다고?
-            염소 젖으로 만든 치즈와 딸기 그리고 발사믹으로 완벽한 전체요리에 도전해보자.</p>
+          <p><%=@reci.content%></p>
         </div> <!-- 첫 번째 본문 내용 -->
 
         <div class="pictures">
@@ -47,13 +53,24 @@
       <form>
         <section class="comments">
           <div class="comments-title">댓글 (22)</div>
-          <input class="comments-write" type="text">
-          <input class="submit" type="submit" value="작성쓰까">
-          <div class="comments-comment">댓글내용</div>
-          <div class="comments-comment">댓글내용</div>
-          <div class="comments-comment">댓글내용</div>
-          <div class="comments-comment">댓글내용</div>
-          <div class="comments-comment">댓글내용</div>
+          <div class="profile_image"></div>
+          <textarea name=content class="comments-write" type="text"></textarea>
+          <input class="submit" type="submit" value="댓글 게시">
+
+          <div class="comment-collect">
+
+            <% for i in 0 .. 9 %>
+              <div class="profile_image"></div>
+
+              <div class="nick-comment">
+                <div class="nickname">문어복어</div>
+                <div class="comments-comment">와우!! 정말 맛있어 보여요!!</div>
+              </div>
+
+            <% end %>
+
+          </div>
+
         </section><!-- comments 댓글모은 것들 끝 -->
       </form>
     </section> <!-- left bottom 끝 -->
@@ -84,7 +101,7 @@
       <!-- view, 좋아요 수, 댓글 수  -->
 
       <span class="date"> 게시:
-        <div class="when"><%= @reci.created_at.to_datetime.strftime("%Y년 %m월 %d일")%></div>
+        <div class="when">년월일</div>
       </span>
 
     </div> <!-- right-comment 끝-->
@@ -107,4 +124,4 @@
   </section><!--right 끝-->
 
 
-</section><!--show 끝-->
+</section>
