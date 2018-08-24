@@ -71,10 +71,14 @@
         <a class="notify-more" href="/notice">more</a>
       </div>
       <div class="bottom-notify">
-          <p class="bottom-notify-title"><a href="/notice/">문어복어</a></p>
-          <p class="bottom-notify-title"><a href="/notice/">복어문어</a></p>
-          <p class="bottom-notify-title"><a href="/notice/">스까의 희망 : 갓은주</a></p>
-      </div>
+          <% @notify.each do |notice|%>
+          <% if notice.id > 3 %>
+            <% break %>
+          <% else %>
+            <p class="bottom-notify-title"><a href="/notice/<%=notice.id%>"><%=notice.title%></a></p>
+          <% end %>
+          <% end %>
+        </div>
 
     </div> <!-- bottom-right-notify 끝 -->
 

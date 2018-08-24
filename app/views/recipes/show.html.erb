@@ -6,18 +6,29 @@
       <div class="left-top-title"><%=@reci.title%></div>
       <!-- 본문 제목 -->
 
+
+      ####
+      <% @noti.each do |notice| %>
+        <div class="notify-one">
+          <a class="notify-title" href="/notice/<%=notice.id%>"><%=notice.title%></a>
+          <p class="notify-content">대장스까</p>
+        </div>
+      <% end %>
       <div class="left-top-content">
+        <% for i in 1..5%>
         <% if @recipic_count > @reci_count %>
         <% @recipic.each do |pictures| %>
           <div class="pictures">
           <div class="picture">
-        <%=image_tag pictures.find(@reci.id).image.url ,class: 'picture'%></div>
+        <%=image_tag pictures.find(@recipic).image.url,class: 'picture'%></div>
           </div>
             <div class="content-comment">
               <p><%=@reci.content%></p>
             </div>
         <% end %>
         <% end %>
+        <% end %>
+
 
         <div class="pictures">
           <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>

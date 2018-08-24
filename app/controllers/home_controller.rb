@@ -6,6 +6,8 @@ class HomeController < ApplicationController
     #
     # 3중 inner join --> (Recipe, User, RecipeImage)
     @r_list = Recipe.select('recipes.*, recipe_images.id , users.nickname').joins(:recipe_images, :user).group("recipes.id")
+    @notify = Notice.all
+
   end
 
   def search
