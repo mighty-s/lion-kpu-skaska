@@ -36,11 +36,13 @@
     </section> <!-- left-top 끝 -->
 
     <section class="left-bottom">
-      <form>
+      <form action="/comment_recipes" method="post">
+        <input type="hidden" value="<%= @token %>" name="authenticity_token">
+        <input type="hidden" name="recipe_id" value="<%=params[:id]%>">
         <section class="comments">
           <div class="comments-title">댓글 (22)</div>
           <div class="profile_image"></div>
-          <textarea name=content class="comments-write" type="text"></textarea>
+          <textarea name="comment_content" class="comments-write" type="text"></textarea>
           <input class="submit" type="submit" value="댓글 게시">
 
           <div class="comment-collect">

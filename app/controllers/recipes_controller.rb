@@ -14,6 +14,8 @@ class RecipesController < ApplicationController
     @recipic_count = @reci.recipe_images.count
     @reci_split = @reci_p.split("\r\n")
     view_increase(@reci)
+
+    @token = form_authenticity_token
     end
 
   def new; end # 레시피 작성 페이지

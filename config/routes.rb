@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'comment_recipes/create'
+
+  get 'comment_recipes/destroy'
+
   get 'comments/create'
 
   get 'comments/destroy'
@@ -45,6 +49,7 @@ Rails.application.routes.draw do
   # Comment routes
 
     #RecipeComment routes
+  post 'comment_recipes/' => 'comment_recipes#create'
     #NoticeComment routes
   post 'comments/' => 'comments#create'
 
@@ -52,10 +57,6 @@ Rails.application.routes.draw do
 
   # Recipe routes
    resources :recipes
- # get 'recipes/new' => 'recipes#new'
-
- # get 'recipes/index' => 'recipes#index'
-
 
   # Home routes
   get 'home/search' => 'home#search'
