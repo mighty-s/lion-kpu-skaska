@@ -14,4 +14,8 @@ module RecipesHelper
     hash.to_s.gsub(/\s+/, '')
   end
 
+  def view_increase(recipe)
+    recipe.view = recipe.view+1
+    recipe.save()
+  end
 end
