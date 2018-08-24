@@ -36,25 +36,24 @@
     </section> <!-- left-top 끝 -->
 
     <section class="left-bottom">
-      <form>
+      <form action="/comment_recipes" method="post">
+        <input type="hidden" value="<%= @token %>" name="authenticity_token">
+        <input type="hidden" name="recipe_id" value="<%=params[:id]%>">
         <section class="comments">
-          <div class="comments-title">댓글 (22)</div>
+          <div class="comments-title">댓글 (<%=@comments_count%>)</div>
           <div class="profile_image"></div>
-          <textarea name=content class="comments-write" type="text"></textarea>
+          <textarea name="comment_content" class="comments-write" type="text"></textarea>
           <input class="submit" type="submit" value="댓글 게시">
 
           <div class="comment-collect">
-
-            <% for i in 0 .. 9 %>
+            <% @comments.each do |comment| %>
               <div class="profile_image"></div>
-
+              <a href='/comments/<%=comment.id%>' data-confirm='진짜 삭제하시게쓰까?' data-method='DELETE'>X</a>
               <div class="nick-comment">
-                <div class="nickname">문어복어</div>
-                <div class="comments-comment">와우!! 정말 맛있어 보여요!!</div>
+                <div class="nickname"><%= %></div>
+                <div class="comments-comment"><%=comment.content %></div>
               </div>
-
             <% end %>
-
           </div>
 
         </section><!-- comments 댓글모은 것들 끝 -->
