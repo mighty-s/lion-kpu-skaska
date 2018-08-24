@@ -6,8 +6,12 @@ class RecipesController < ApplicationController
 
   def show
     @reci = Recipe.find params[:id]
-    @recipic = @reci.recipe_images
     @reci_user = @reci.user.nickname
+    @recipic = @reci.recipe_images
+    @reci_p = @reci.content
+    @recipic_count = @reci.recipe_images.count
+    @reci_count = @reci_p.split("\r\n").count
+
   end
 
   def new; end # 레시피 작성 페이지
@@ -22,9 +26,12 @@ class RecipesController < ApplicationController
       )
 
       Recipe.image_create(recipe, params) unless recipe.nil?
+
+      redirect_to "/recipes/#{recipe.id}"
+    else
+      redirect_to 'home/index'
     end
 
-    redirect_to "/recipes/#{recipe.id}"
   end
 
   def edit; end
