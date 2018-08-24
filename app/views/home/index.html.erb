@@ -12,7 +12,7 @@
         <div class="picture-on">
           <div class="picture-main">
             <a href="/recipes/<%=recipe.id%>">
-              <%=image_tag RecipeImage.find(recipe.id).image.url ,class: 'main-pics-image'%>
+              <%=image_tag RecipeImage.find(recipe.recipe_images.first.id).image.url ,class: 'main-pics-image'%>
             </a>
           </div>
           <div class="picture-name">
