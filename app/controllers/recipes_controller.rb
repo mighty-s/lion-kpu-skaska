@@ -33,9 +33,7 @@ class RecipesController < ApplicationController
         hash_tag: parse_in_hash(params[:hash_tag]),
         user_id: session[:user]['id']
       )
-
       Recipe.image_create(recipe, params) unless recipe.nil?
-
       redirect_to "/recipes/#{recipe.id}"
     else
       redirect_to 'home/index'
