@@ -33,8 +33,8 @@
     <div class="bottom-left">
 
       <div class="bottom-left-top">
-          <p>BEST3</p>
-          <a href="" class="best-more">more</a>
+        <p>BEST3</p>
+        <a href="" class="best-more">more</a>
       </div><!-- bottom-left-top 끝 -->
 
       <div class="bottom-left-bottom">
@@ -60,25 +60,24 @@
 
       <div class="bottom-right-notify">
 
-      <div class="notify">
-        <p>공지 사항</p>
-        <a class="notify-more" href="/notice">more</a>
-      </div>
-      <div class="bottom-notify">
+        <div class="notify">
+          <p>공지 사항</p>
+          <a class="notify-more" href="/notice">more</a>
+        </div>
+        <div class="bottom-notify">
           <% @notify.each do |notice|%>
-          <% if notice.id > 3 %>
-            <% break %>
-          <% else %>
-            <p class="bottom-notify-title"><a href="/notice/<%=notice.id%>"><%=notice.title%></a></p>
-          <% end %>
+            <% if notice.id > 3 %>
+              <% break %>
+            <% else %>
+              <p class="bottom-notify-title"><a href="/notice/<%=notice.id%>"><%=notice.title%></a></p>
+            <% end %>
           <% end %>
         </div>
 
-    </div> <!-- bottom-right-notify 끝 -->
+      </div> <!-- bottom-right-notify 끝 -->
 
       <div class="bottom-add">
-        <span>광고 배너 자리입니당</span>
-        <iframe class="video" src="https://www.youtube.com/embed/xRbPAVnqtcs?amp;vq=hd3000&showinfo=0&autoplay=1&loop=1;playlist=xRbPAVnqtcs"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <%= image_tag 'add.png' , class:"add" %>
       </div>
 
     </div> <!-- bottom-right 끝 -->
