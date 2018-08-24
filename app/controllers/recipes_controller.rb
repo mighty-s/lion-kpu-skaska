@@ -5,7 +5,9 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @index = 0
     @reci = Recipe.find params[:id]
+    @rec_image = RecipeImage.where(recipe_id: params[:id])
     @reci_user = @reci.user.nickname
     @recipic = @reci.recipe_images
     @reci_p = @reci.content

@@ -6,37 +6,28 @@
       <div class="left-top-title"><%=@reci.title%></div>
       <!-- 본문 제목 -->
 
-
-
-        <div class="left-top-content">
+      <div class="left-top-content">
+        <% for @index in 0..(@rec_image.length/2.to_f).ceil %>
           <div class="pictures">
-            <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
-            <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
+            <% unless @rec_image[@index].nil? %>
+              <div class="picture"><%=image_tag @rec_image[@index].image.url, class: 'picture'%></div>
+            <%end%>
+
+            <% unless @rec_image[@index+1].nil? %>
+              <div class="picture"><%=image_tag @rec_image[@index+1].image.url, class: 'picture'%></div>
+            <%end%>
           </div> <!-- 첫 번째 사진 2개 -->
 
           <div class="content-comment">
-            <p><%=@reci.content%></p>
+            <p><%=@reci_split[@index]%></p>
           </div> <!-- 첫 번째 본문 내용 -->
+        <%end%>
 
-
-      <div class="pictures">
-          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
-          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
-      </div> <!-- 두 번째 사진 3개 -->
-
-        <div class="content-comment">
-          <p><%=@reci.content%></p>
-        </div> <!-- 두 번째 본문 내용 -->
-
-
-        <div class="pictures">
-          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
-          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
-        </div> <!-- 세 번째 사진 3개 -->
-
-        <div class="content-comment">
-          <p><%=@reci.content%></p>
-        </div> <!-- 세 번째 본문 내용 -->
+        <% for i in @index+1..@rec_image.length %>
+          <div class="content-comment">
+            <p><%=@reci_split[i]%></p>
+          </div>
+        <%end%>
 
       </div> <!-- left-top-content 본문 끝 -->
 
