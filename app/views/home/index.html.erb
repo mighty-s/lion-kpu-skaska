@@ -11,19 +11,19 @@
       <% @star.each do |recipe| %>
         <% if recipe.id > 11 %>
           <% break %>
-          <%else %>
-        <div class="picture-on">
-          <div class="picture-main">
-            <a href="/recipes/<%=recipe.id%>">
-              <%=image_tag RecipeImage.find(recipe.recipe_images.first.id).image.url ,class: 'main-pics-image'%>
-            </a>
-          </div>
-          <div class="picture-name">
-            <p class="recipe"><%=recipe.title%></p>
-          </div>
+        <%else %>
+          <div class="picture-on">
+            <div class="picture-main">
+              <a href="/recipes/<%=recipe.id%>">
+                <%=image_tag RecipeImage.find(recipe.recipe_images.first.id).image.url ,class: 'main-pics-image'%>
+              </a>
+            </div>
+            <div class="picture-name">
+              <p class="recipe"><%=recipe.title%></p>
+            </div>
 
-        </div> <!-- picture-on 끝 -->
-      <% end %>
+          </div> <!-- picture-on 끝 -->
+        <% end %>
       <% end %>
 
     </div><!-- pictures 끝 -->
@@ -37,7 +37,6 @@
 
       <div class="bottom-left-top">
         <p>BEST3</p>
-        <a href="" class="best-more">more</a>
       </div><!-- bottom-left-top 끝 -->
 
       <div class="bottom-left-bottom">
