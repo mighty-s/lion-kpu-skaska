@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
     @comments = @reci.comment_recipes
    #  if !@comment.nil?
     @comments_count = @comments.count
-    @comments_nickname = @comments.find(params[:id]).user.nickname
+  #  @comments_nickname = @comments.find(params[:id]).user.nickname
     @token = form_authenticity_token
    #@ end
     end
