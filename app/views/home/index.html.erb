@@ -8,16 +8,15 @@
     <a href="#"><%=image_tag 'left-arrow.jpg' ,class:"left-arrow"%></a>
 
     <div class="pictures">
-      <% @r_list.each do |recipe| %>
+      <% @star.each do |recipe| %>
         <div class="picture-on">
           <div class="picture-main">
-            <a href="/recipe/index">
-              <%=image_tag RecipeImage.find(recipe.id).image.url ,class: 'main-pics-image'%>
+            <a href="/recipes/<%=recipe.id%>">
+              <%=image_tag RecipeImage.find(recipe.recipe_images.first.id).image.url ,class: 'main-pics-image'%>
             </a>
           </div>
           <div class="picture-name">
             <p class="recipe"><%=recipe.title%></p>
-            <p class="nickname"><%=recipe.nickname%></p>
           </div>
 
         </div> <!-- picture-on 끝 -->
@@ -39,25 +38,20 @@
       </div><!-- bottom-left-top 끝 -->
 
       <div class="bottom-left-bottom">
+        <% cnt = 1%>
+        <% @top3.each do |top| %>
 
-        <div class="best1">
-          <div class="best1-box"></div>
-          <p>1위</p>
-          <p>진리의 팝콘</p>
-        </div>
-
-        <div class="best2">
-          <div class="best2-box"></div>
-          <p>2위</p>
-          <p>진리의 팝콘</p>
-        </div>
-
-        <div class="best3">
-          <div class="best3-box"></div>
-          <p>3위</p>
-          <p>진리의 팝콘</p>
-        </div>
-
+          <div class="best<%=cnt%>">
+            <div class="best<%=cnt%>-box">
+              <a href="/recipes/<%= top.id %>">
+                <%= image_tag RecipeImage.find(top.recipe_images.first.id).image.url, class: 'best'+cnt.to_s+'-box' %>
+              </a>
+            </div>
+            <p><%=cnt%>위</p>
+            <p><%=top.title%></p>
+          </div>
+          <%cnt = cnt+1%>
+        <%end%>
       </div> <!-- bottom-left-bottom 끝 -->
 
     </div> <!-- bottom-left 끝 -->
@@ -71,13 +65,16 @@
         <a class="notify-more" href="/notice">more</a>
       </div>
       <div class="bottom-notify">
-          <p class="bottom-notify-title"><a href="/notice/">문어복어</a></p>
-          <p class="bottom-notify-title"><a href="/notice/">복어문어</a></p>
-          <p class="bottom-notify-title"><a href="/notice/">스까의 희망 : 갓은주</a></p>
-      </div>
+          <% @notify.each do |notice|%>
+          <% if notice.id > 3 %>
+            <% break %>
+          <% else %>
+            <p class="bottom-notify-title"><a href="/notice/<%=notice.id%>"><%=notice.title%></a></p>
+          <% end %>
+          <% end %>
+        </div>
 
     </div> <!-- bottom-right-notify 끝 -->
-
 
       <div class="bottom-add">
         <span>광고 배너 자리입니당</span>

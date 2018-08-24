@@ -1,4 +1,5 @@
 
+<h1>INDEX.html.erb</h1>
 <section class="show">
   <section class="left">
 
@@ -49,15 +50,15 @@
 
           <div class="comment-collect">
 
-          <% for i in 0 .. 9 %>
-          <div class="profile_image"></div>
+            <% for i in 0 .. 9 %>
+              <div class="profile_image"></div>
 
-            <div class="nick-comment">
-            <div class="nickname">문어복어</div>
-          <div class="comments-comment">와우!! 정말 맛있어 보여요!!</div>
-            </div>
+              <div class="nick-comment">
+                <div class="nickname">문어복어</div>
+                <div class="comments-comment">와우!! 정말 맛있어 보여요!!</div>
+              </div>
 
-          <% end %>
+            <% end %>
 
           </div>
 
@@ -91,7 +92,121 @@
       <!-- view, 좋아요 수, 댓글 수  -->
 
       <span class="date"> 게시:
-        <div class="when">2018년 8월 14일</div>
+        <div class="when">년월일</div>
+      </span>
+
+    </div> <!-- right-comment 끝-->
+
+
+    <article class="collection-save">
+      <a href="#"><%=image_tag 'collection.png' ,class:"save-name"%></a>
+    </article> <!-- 관심있는 스까로 저장 -->
+
+    <a href="#"><%=image_tag 'like-button.png' ,class:"like-button"%></a>
+
+    <article class="share">
+      <a href="#"><%=image_tag 'facebook.png' ,class:"facebook"%></a>
+      <a href="#"><%=image_tag 'instagram.jpeg' ,class:"instagram"%></a>
+      <a href="#"><%=image_tag 'twitter.jpeg' ,class:"twitter"%></a>
+      <a href="#"><%=image_tag 'kakao_story.jpeg' ,class:"kakao-story"%></a>
+    </article> <!--페북, 인스타, 트위터, 카스 share 끝-->
+
+
+  </section><!--right 끝-->
+
+
+</section><!--show 끝-->
+
+
+
+<section class="show">
+  <section class="left">
+
+    <section class="left-top">
+      <a href="/"><div class="go-main">메인!</div></a>
+      <div class="left-top-title"><%=@reci.title%></div>
+      <!-- 본문 제목 -->
+
+      <div class="left-top-content">
+        <div class="pictures">
+          <div class="content-comment">
+            <p><%=@reci.content%></p>
+          </div>
+          <div class="pictures">
+            <div class="picture">
+              <%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'main-pics-image'%></div>
+            <div class="picture">
+              <%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'main-pics-image'%></div>
+          </div><!-- 첫 번째 사진 3개 -->
+
+          <div class="content-comment">
+            <p>아직도 브루스게타(바게트 위에 야채와 소스를 얹은 전체요리)를 토마토로 만든다고?
+              염소 젖으로 만든 치즈와 딸기 그리고 발사믹으로 완벽한 전체요리에 도전해보자.</p>
+          </div> <!-- 첫 번째 본문 내용 -->
+
+          <div class="pictures">
+            <div class="picture">사진1</div>
+            <div class="picture">사진2</div>
+          </div> <!-- 두 번째 사진 3개 -->
+
+          <div class="content-comment">본문내용</div>
+          <!-- 두 번째 본문 내용 -->
+
+          <div class="pictures">
+            <div class="picture">사진1</div>
+            <div class="picture">사진2</div>
+          </div><!-- 세 번째 사진 3개 -->
+          <div class="content-comment">본문내용</div>
+          <!-- 세 번째 본문 내용 -->
+
+        </div><!-- left-top-content 본문 끝 -->
+
+        <a href="/"><div class="go-main">메인!</div></a>
+      </div>
+    </section> <!-- left-top 끝 -->
+
+    <section class="left-bottom">
+      <form>
+        <section class="comments">
+          <div class="comments-title">댓글 (22)</div>
+          <input class="comments-write" type="text">
+          <input class="submit" type="submit" value="작성쓰까">
+          <div class="comments-comment">댓글내용</div>
+          <div class="comments-comment">댓글내용</div>
+          <div class="comments-comment">댓글내용</div>
+          <div class="comments-comment">댓글내용</div>
+          <div class="comments-comment">댓글내용</div>
+        </section><!-- comments 댓글모은 것들 끝 -->
+      </form>
+    </section> <!-- left bottom 끝 -->
+
+  </section><!-- left 끝 -->
+
+
+  <section class="right">
+
+    <section class="right_title">
+      <div class="right_title_left">
+        <div class="nickname"><%=@reci_user%></div>
+        <a href="#"><%=image_tag 'watch.png' ,class:"watch"%></a>
+      </div>
+      <div class="profile_image"></div>
+    </section> <!-- 닉네임, 팔로우, 프사 모음 -->
+
+
+    <div class="right-comment">
+      <div class="comment-hash"><p><%=@reci.hash_tag%></p></div>
+      <!-- 해쉬 태그 -->
+
+      <div class="see-like-number">
+        <%=image_tag 'see.png'%><div class="comment-see">121</div>
+        <%=image_tag 'like.png'%><div class="comment-like">200</div>
+        <%=image_tag 'comment.png'%><div class="comment-number">22</div>
+      </div>
+      <!-- view, 좋아요 수, 댓글 수  -->
+
+      <span class="date"> 게시:
+        <div class="when"><%= @reci.created_at.to_datetime.strftime("%Y년 %m월 %d일")%></div>
       </span>
 
     </div> <!-- right-comment 끝-->

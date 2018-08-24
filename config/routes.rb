@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'recipe_comments/create'
+
+  get 'recipe_comments/destroy'
+
+  get 'comment_recipes/create'
+
+  get 'comment_recipes/destroy'
+
   get 'comments/create'
 
   get 'comments/destroy'
@@ -47,14 +55,12 @@ Rails.application.routes.draw do
     #RecipeComment routes
     #NoticeComment routes
   post 'comments/' => 'comments#create'
+  post 'comment_recipes' => 'recipe_comments#create'
 
   delete 'comments/:id' => 'comments#destroy'
 
   # Recipe routes
    resources :recipes
- # get 'recipes/new' => 'recipes#new'
-
- # get 'recipes/index' => 'recipes#index'
 
   # Home routes
   get 'home/search' => 'home#search'

@@ -4,10 +4,11 @@
 
 <form action="<%=recipes_path%>" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
   <div class="write">
-    <input name="title" class="receipt_name" type="text" placeholder="레시피 이름">
+    <input name="title" class="receipt_name" type="text" placeholder="레시피 이름" required>
     <div class="picture">
       <div class="picture-wrap">
-        <% for i in 0 .. 9 %>
+        <input class="receipt_picture" type="file" name="img[<%=0%>]" required="required">
+        <% for i in 1 .. 9 %>
           <input class="receipt_picture" type="file" name="img[<%=i%>]">
         <% end %>
       </div>
@@ -16,7 +17,7 @@
     <textarea
       name = "content"
       class="receipt_content"
-      placeholder="&#13;&#10;&#13;&#10;1.&#13;&#10;&#13;&#10;2.&#13;&#10;&#13;&#10;3.&#13;&#10;&#13;&#10;4.&#13;&#10;&#13;&#10;">
+      placeholder="&#13;&#10;&#13;&#10;1.&#13;&#10;&#13;&#10;2.&#13;&#10;&#13;&#10;3.&#13;&#10;&#13;&#10;4.&#13;&#10;&#13;&#10;" required>
     </textarea>
 
     <input name = "hash_tag" class="receipt_tag" type="text" placeholder="태그 #입력 (최대 10개)">

@@ -6,12 +6,12 @@
     </div>
     <div class="searchTitle">
       <p><h1>#<%=@searchi%></h1></p>
-      <p><h2>게시물 33</h2></p>
+      <p><h2>게시물 <%=@resultByView.length%></h2></p>
     </div>
   </div>
   <div id="search-main">
     <p>인기 스까</p>
-    <% for i in 1..6%>
+    <% @resultByView.each do |view|%>
       <div class="search-content">
         <a href="">
           <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/04/3d/92/043d923b-7c12-b7e7-e7d4-672d72342e51/AppIcon-1x_U007emarketing-85-220-0-6.png/246x0w.jpg" alt="이미지">
@@ -21,7 +21,7 @@
     <%end%>
 
     <p>최신 스까</p>
-    <% for i in 1..6 %>
+    <% @resultByTime.each do |time| %>
       <div class="search-content">
         <a href="">
           <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/04/3d/92/043d923b-7c12-b7e7-e7d4-672d72342e51/AppIcon-1x_U007emarketing-85-220-0-6.png/246x0w.jpg" alt="이미지">

@@ -803,22 +803,16 @@
     height:50px;
   }
 }
-
-
-//join_complete
-
-#wrap_c
-{
-      .complete_button
-      {
-        font-size:25px;
-        padding-top:25px;
-        border: 1px solid #2E2F30;
-        display: inline-block;
-        background-color: black;
-        width: 150px;
-        height:50px;
-        color: white;
-      }
+.update_button{
+  text-align: center;
+}
+.complete_button{
+  padding:2px;
+  border : 1px solid #2E2F30;
+  display: inline-block;
+  background-color: black;
+  width: 250px;
+  height: 60px;
+  color: white;
 }
 

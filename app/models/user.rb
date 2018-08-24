@@ -11,8 +11,8 @@ class User < ApplicationRecord
   has_many :recipes
   has_many :notices           #(관리자)유저는 여러개의 공지사항 작성 가능
   has_many :comment_notices   #유저는 여러개의 공지사항댓글가능
-  #has_many :comment_recipes  #유저는 여러개의 레시피댓글가능
- 
+  has_many :comment_recipes  #유저는 여러개의 레시피댓글가능
+  has_many :likes            #유저는 여러개의 좋아요 가능
   # 비밀번호 암호화 (bcrypt gem)
   has_secure_password
 

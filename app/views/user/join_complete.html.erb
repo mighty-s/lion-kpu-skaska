@@ -5,7 +5,9 @@
     <h1>회원가입이 완료되었습니다</h1>
     <h1>스까스까에 오신 [ <%=@nickname%> ]스까님 환영합니다!</h1>
     <p>스까님만의 음식 조합들을 이곳에 올리시고 공유하세요!</p>
-    <a href="/recipes/new"><div class="complete_button">스까 등록</div></a>
+    <form action="/user/login">
+      <input type="submit" class="complete_button" value="로그인">
+    </form>
   </div>
 </div>
 
