@@ -21,11 +21,11 @@
   <div class="bottom-menu">
 
     <% if user_loged_in? %>
-    <a href="<%=new_recipe_path%>"><span class="write">등록</span></a>
+      <a href="<%=new_recipe_path%>"><span class="writes">등록</span></a>
     <% end %>
 
     <div class="logo">
-    <a href="/home/index"><%=image_tag 'logo.jpg' ,class:"logo_image"%></a>
+      <a href="/home/index"><%=image_tag 'logo.jpg' ,class:"logo_image"%></a>
     </div>
 
     <form action="/home/search">
