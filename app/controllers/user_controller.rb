@@ -19,6 +19,7 @@ class UserController < ApplicationController
     @user.gender= params[:gender]
     @user.save
     redirect_to '/'
+    ##
   end
 
   def mypage
