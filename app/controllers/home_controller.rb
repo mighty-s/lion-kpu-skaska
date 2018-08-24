@@ -4,12 +4,12 @@ class HomeController < ApplicationController
 
     # Inner Join을 통해서 유저의 별명, 첫번째 첨부 사진까지 같이 가져온다.
     #
-    # 3중 inner join --> (Recipe, User, RecipeImage)
     @notify = Notice.all
     @star = Recipe.all
   end
 
   def search
     @searchi = params[:search_keyword]
+    @result = Recipe.where("hash_tag like ?","%#{@searchi}%")
   end
 end

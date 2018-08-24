@@ -6,18 +6,20 @@
       <div class="left-top-title"><%=@reci.title%></div>
       <!-- 본문 제목 -->
 
-      <div class="left-top-content">
-        <div class="pictures">
-          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
-          <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
-        </div> <!-- 첫 번째 사진 3개 -->
-
-        <div class="content-comment">
-          <p><%=@reci.content%></p>
-        </div> <!-- 첫 번째 본문 내용 -->
 
 
-        <div class="pictures">
+        <div class="left-top-content">
+          <div class="pictures">
+            <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
+            <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
+          </div> <!-- 첫 번째 사진 2개 -->
+
+          <div class="content-comment">
+            <p><%=@reci.content%></p>
+          </div> <!-- 첫 번째 본문 내용 -->
+
+
+      <div class="pictures">
           <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
           <div class="picture"><%=image_tag RecipeImage.find(@reci.id).image.url ,class: 'picture'%></div>
       </div> <!-- 두 번째 사진 3개 -->
