@@ -4,7 +4,7 @@
 
 .main {
   width: 100%;
-  height: 528px;
+  height: 484px;
   overflow-y: scroll;
 
   .main-picture-boxes {
@@ -24,13 +24,13 @@
 
 
 .main-picture-boxes {
-    .left-arrow {
-      position: absolute;
-      top: 200px;
-      left: 30px;
-      width: 68px;
-      height: 68px;
-    }
+  .left-arrow {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    width: 68px;
+    height: 68px;
+  }
 
   .pictures {
     height:500px;
@@ -39,13 +39,13 @@
     margin-left:10%;
   }
 
-    .right-arrow {
-      position: absolute;
-      top: 200px;
-      right: 30px;
-      width: 68px;
-      height: 68px;
-    }
+  .right-arrow {
+    position: absolute;
+    top: 200px;
+    right: 30px;
+    width: 68px;
+    height: 68px;
+  }
 
 
 }//main-picture-boxes
@@ -68,7 +68,7 @@
     margin-top:20px;
     margin-bottom:10px;
   }
-  
+
   .picture-main > a > .main-pics-image
   {
     width : 100%;
@@ -81,6 +81,7 @@
     text-align: left;
     font-weight: bold;
     color: #999999;
+    width:180px;
   }
 
   .recipe
@@ -103,18 +104,17 @@
   .bottom-left
   {
     float:left;
-    width: 43%;
+    width: 54.8%;
     border: 1px solid #2E2F30;
-    margin-left:80px;
+    margin-left:68.3px;
     margin-bottom:20px;
   }
 
   .bottom-right
   {
     float:right;
-    width: 43%;
-    margin-right:80px;
-    margin-bottom:20px;
+    width: 32.4%;
+    margin-right:74px;
   }
 
   &::after
@@ -141,6 +141,7 @@
   .bottom-left-bottom
   {
     width: 100%;
+    height:379.76px;
   }
 
 }//bottom-left 끝
@@ -176,7 +177,6 @@
 
 .bottom-left-bottom {
   width: 100%;
-  margin-bottom:15px;
 
   .best1
   {
@@ -194,7 +194,7 @@
   {
     display: inline-block;
     margin: 15px;
-      }
+  }
 
 } //bottom-left-bottom 끝
 
@@ -267,16 +267,15 @@
 
   .bottom-right-notify
   {
-
-    margin-bottom:10px;
+    height:217.71px;
+    margin-bottom:21.3px;
     border: 1px solid black;
-    border-bottom: 0;
   }
 
   .bottom-add
   {
     border: 1px solid black;
-    height:155px;
+    height:180.71px;
   }
 
 }//bottom-right 끝
@@ -292,6 +291,16 @@
   }
 
 }//bottom-right-notify 끝
+
+
+.bottom-add
+{
+  .add
+  {
+    width:100%;
+    height:100%;
+  }
+}
 
 
 .notify
@@ -345,8 +354,8 @@
 
 
 
-  ////////////////
- /// search ////
+////////////////
+/// search ////
 //////////////
 #wrap
 {
